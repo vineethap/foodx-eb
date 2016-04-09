@@ -1,6 +1,6 @@
 'use strict';
 
-class SignupController {
+class RegisterController {
   //start-non-standard
   user = {};
   errors = {};
@@ -21,7 +21,8 @@ class SignupController {
         email: this.user.email,
         password: this.user.password
       })
-      .then(() => {
+      .then((data) => {
+        console.log(data)
         // Account created, redirect to home
         this.$state.go('main');
       })
@@ -40,4 +41,4 @@ class SignupController {
 }
 
 angular.module('foodXApp')
-  .controller('SignupController', SignupController);
+  .controller('RegisterController', RegisterController);

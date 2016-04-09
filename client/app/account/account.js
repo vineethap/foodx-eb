@@ -22,9 +22,9 @@ angular.module('foodXApp')
         }
       })
       .state('signup', {
-        url: '/signup',
+        url: '/add-admin',
         templateUrl: 'app/account/signup/signup.html',
-        controller: 'SignupController',
+        controller: 'RegisterController',
         controllerAs: 'vm'
       })
       .state('settings', {

@@ -24,8 +24,9 @@ function handleError(res, statusCode) {
  * restriction: 'admin'
  */
 export function index(req, res) {
-  return User.find({}, '-salt -password').exec()
+  return User.find({role:"admin"}, '-salt -password').exec()
     .then(users => {
+      console.log(users)
       res.status(200).json(users);
     })
     .catch(handleError(res));
@@ -37,13 +38,13 @@ export function index(req, res) {
 export function create(req, res, next) {
   var newUser = new User(req.body);
   newUser.provider = 'local';
-  newUser.role = 'user';
+  newUser.role = 'admin';
   newUser.save()
     .then(function(user) {
       var token = jwt.sign({ _id: user._id }, config.secrets.session, {
         expiresIn: 60 * 60 * 5
       });
-      res.json({ token });
+      res.json({ user:user,message:"created new user" });
     })
     .catch(validationError(res));
 }

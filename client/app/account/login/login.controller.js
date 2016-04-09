@@ -1,15 +1,17 @@
 'use strict';
 
 class LoginController {
-  constructor(Auth, $state) {
+  constructor(Auth, $scope, $state) {
     this.user = {};
     this.errors = {};
     this.submitted = false;
-
+    
     this.Auth = Auth;
+    this.isLoggedIn = Auth.isLoggedIn();
+    this.$scope=$scope;
     this.$state = $state;
   }
-
+ 
   login(form) {
     this.submitted = true;
 
@@ -18,7 +20,7 @@ class LoginController {
         email: this.user.email,
         password: this.user.password
       })
-      .then(() => {
+      .then((result) => {
         // Logged in, redirect to home
         this.$state.go('main');
       })
