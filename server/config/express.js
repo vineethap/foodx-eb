@@ -5,10 +5,12 @@
 'use strict';
 
 import express from 'express';
+
 import favicon from 'serve-favicon';
 import morgan from 'morgan';
 import compression from 'compression';
 import bodyParser from 'body-parser';
+import expressValidator from 'express-validator';
 import methodOverride from 'method-override';
 import cookieParser from 'cookie-parser';
 import errorHandler from 'errorhandler';
@@ -18,6 +20,7 @@ import config from './environment';
 import passport from 'passport';
 import session from 'express-session';
 import connectMongo from 'connect-mongo';
+
 import mongoose from 'mongoose';
 var MongoStore = connectMongo(session);
 
@@ -30,6 +33,7 @@ export default function(app) {
   app.use(compression());
   app.use(bodyParser.urlencoded({ extended: false }));
   app.use(bodyParser.json());
+  app.use(expressValidator());
   app.use(methodOverride());
   app.use(cookieParser());
   app.use(passport.initialize());
@@ -53,9 +57,9 @@ export default function(app) {
    */
   if ('test' !== env) {
     app.use(lusca({
-      csrf: {
-        angular: true
-      },
+      // csrf: {
+      //   angular: true
+      // },
       xframe: 'SAMEORIGIN',
       hsts: {
         maxAge: 31536000, //1 year, in seconds

@@ -17,6 +17,18 @@ function UserResource($resource) {
       params: {
         id: 'me'
       }
+    },
+    getUser: {
+      method: 'GET',
+      params:{
+        id:'id'
+      }
+    },
+    userUpdate:{
+     method:'PUT'
+    },
+    remove: {
+      method: 'DELETE'
     }
   });
 }

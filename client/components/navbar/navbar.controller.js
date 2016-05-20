@@ -18,6 +18,7 @@ class NavbarController {
   }
   logout(){
    this.logout()
+   
   }
 }
 

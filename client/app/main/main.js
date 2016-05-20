@@ -4,7 +4,7 @@ angular.module('foodXApp')
   .config(function($stateProvider) {
     $stateProvider
       .state('main', {
-        url: '/',
+        url: '/dashboard',
         template: '<main></main>'
       });
   });

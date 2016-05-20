@@ -24,21 +24,27 @@ function handleError(res, statusCode) {
  * restriction: 'admin'
  */
 export function index(req, res) {
-  return User.find({role:"admin"}, '-salt -password').exec()
+  return User.find({role:req.query.role}, '-salt -password').exec()
     .then(users => {
-      console.log(users)
       res.status(200).json(users);
     })
     .catch(handleError(res));
 }
-
+export function fileupload(req, res) {
+   return User.findById(req.params.id).exec()
+    .then(user => {
+  
+      res.status(200).json(user);
+    })
+    .catch(handleError(res));
+}
 /**
  * Creates a new user
  */
 export function create(req, res, next) {
+  console.log(req.body)
   var newUser = new User(req.body);
   newUser.provider = 'local';
-  newUser.role = 'admin';
   newUser.save()
     .then(function(user) {
       var token = jwt.sign({ _id: user._id }, config.secrets.session, {
@@ -54,25 +60,28 @@ export function create(req, res, next) {
  */
 export function show(req, res, next) {
   var userId = req.params.id;
-
   return User.findById(userId).exec()
     .then(user => {
       if (!user) {
         return res.status(404).end();
       }
-      res.json(user.profile);
+      res.json(user);
     })
     .catch(err => next(err));
 }
 
 /**
- * Deletes a user
+ * Disable and enable a user
  * restriction: 'admin'
  */
-export function destroy(req, res) {
-  return User.findByIdAndRemove(req.params.id).exec()
-    .then(function() {
-      res.status(204).end();
+export function disable(req, res) {
+  return User.findById(req.params.id).exec()
+    .then(user => {
+      user.active = !user.active;
+      return user.save()
+      .then(() => {
+        res.status(201).end();
+      })
     })
     .catch(handleError(res));
 }
@@ -115,7 +124,28 @@ export function me(req, res, next) {
     })
     .catch(err => next(err));
 }
-
+export function updateDetails(req, res, next) {
+  var userId = req.body._id;
+  return User.findById(userId).exec()
+    .then(user => {// don't ever give out the password or salt
+      if (!user) {
+        return res.status(401).end();
+      }else{
+        user.name=req.body.name;
+        user.lastname=req.body.lastname;
+        user.email=req.body.email;
+        user.address=req.body.address;
+        user.gender=req.body.gender;
+        
+        return user.save()
+          .then(() => {
+            res.status(204).end();
+          })
+          .catch(validationError(res));
+      }
+    })
+    .catch(err => next(err));
+}
 /**
  * Authentication callback
  */

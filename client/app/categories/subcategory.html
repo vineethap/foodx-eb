@@ -1,0 +1,99 @@
+
+<div class="page-content-wrapper">
+  <div class="content">
+    <div class="container" ng-init="ct.initSubCategory()">
+      <div class="row">
+          <div class="panel panel-default panel-height m-t-20" >
+              <div class="row">
+    			      <div class=" col-md-2 text-center">
+                </div>
+                <div class="col-md-4 text-align  ">
+                  <label class="text-muted text-size">{{ct.category.name}}</label>
+                
+                </div>
+                </div>
+                <div  ng-init="ct.init()">
+                  <ul class="nav nav-tabs nav-tabs-linetriangle">
+                      <li class="active">
+                        <a data-toggle="tab" pg-tab="" href="#subcategory" aria-expanded="true"><span>Subcategory</span></a>
+                      </li>
+                      
+                    </ul> 
+                    <div class="tab-content">
+                      <div class="tab-pane active" id="item">
+                        <div class="row ">
+                          <button  class="btn btn-warning btn-cons m-l-10" ng-click="ct.addSubCategory()">+SubCategory</button>
+                          <br/>
+                          <table class="table table-striped">
+                            <thead>
+                              <tr role="row"  >
+                                <th>#</th>
+                                
+                                <th>subcategory</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr role="row"  ng-class="item.active?'': 'disabled'" ng-repeat="sub in ::ct.subcategory track by $index">
+                                <td>{{$index + 1}}</td>
+                                <td ng-if="!show_input">{{sub}}</td>
+                                <td ng-if="show_input"><input type="text" ng-model="ct.subcategory[$index]" /></td>
+                                <td ><a class="btn btn-success" ng-show="!show_input" ng-click="show_input=true ; ct.show=true" ><i  class=" fa fa-pencil-square-o fa-1x pointer" aria-hidden="true" ></i></a></td>
+                                <td ><a class="btn btn-success"  ng-show="show_input" ng-click="ct.editSubCategory(ct.subcategory[$index],$index,true);show_input=false"><i class="fa fa-check fa-1x pointer" aria-hidden="true" ></i></a></td>
+                                <td ><a class="btn btn-danger" ng-click="ct.deleteSubCategory(ct.subcategory[$index],$index,false)"><i  class="fa fa-close fa-1x pointer" aria-hidden="true" ></i></a></td>
+                                 
+                              </tr>
+                            </tbody>
+                          </table> 
+                        </div>
+                      </div>
+                  </div> 
+        <!-- </div> -->
+                </div>
+              </div>
+      </div>
+      
+    </div>
+	</div>
+</div>
+<script type="text/ng-template" id="subcategory.html">
+  <div class="modal-body m-t-20">
+    
+    <div >
+    <div>
+        <input id="new-todo" class="input-text" type="text" ng-model="vm.s_category"  size="30"
+        placeholder="Enter your SubCategory" ng-keyup="vm.newSubCategory()"/>
+    </div>
+    <div style="display:done;" style="display: block;">
+        
+        <ul class="list-group" >
+          <li class="category-list" ng-repeat="elem in vm.subcategory" >
+            
+              <span>{{elem}}</span>
+         
+          </li>
+        </ul>
+    </div>
+          
+  </div>
+     
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="vm.addSubCategory(vm.subcategory)">OK</button>
+    <button class="btn btn-warning" type="button" ng-click="$dismiss()">Cancel</button>
+  </div>
+</script>
+
+<script type="text/ng-template" id="deletemodal.html">
+  <div class="modal-body m-t-20">
+    <div>
+     <p> Are you sure you want to delete this subcategory?</p>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="vm.deleteSubCategory()">OK</button>
+    <button class="btn btn-warning" type="button" ng-click="$dismiss()">Cancel</button>
+  </div>
+</script>

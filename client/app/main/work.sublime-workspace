@@ -1,0 +1,1085 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ac",
+				"activities"
+			],
+			[
+				"arr",
+				"array"
+			],
+			[
+				"a",
+				"_activelist"
+			],
+			[
+				"acti",
+				"_activelist"
+			],
+			[
+				"_",
+				"_activelist"
+			],
+			[
+				"act",
+				"activelist"
+			],
+			[
+				"mess",
+				"messages"
+			],
+			[
+				"pr",
+				"provider_url"
+			],
+			[
+				"cha",
+				"channel"
+			],
+			[
+				"ch",
+				"channel_list"
+			],
+			[
+				"cane",
+				"channel_list"
+			],
+			[
+				"st",
+				"state	React: this.state."
+			],
+			[
+				"user",
+				"user_details"
+			],
+			[
+				"sta",
+				"state	React: this.state."
+			],
+			[
+				"us",
+				"userdetails"
+			],
+			[
+				"w",
+				"warning"
+			],
+			[
+				"stat",
+				"status"
+			],
+			[
+				"m",
+				"members"
+			],
+			[
+				"me",
+				"members"
+			],
+			[
+				"channel",
+				"channels"
+			],
+			[
+				"mes",
+				"message"
+			],
+			[
+				"msg",
+				"msg_time"
+			],
+			[
+				"activ",
+				"activity"
+			],
+			[
+				"messa",
+				"message"
+			],
+			[
+				"sh",
+				"show"
+			],
+			[
+				"chara",
+				"characters"
+			],
+			[
+				"show",
+				"show_span"
+			],
+			[
+				"ti",
+				"Time"
+			],
+			[
+				"da",
+				"data"
+			],
+			[
+				"sen",
+				"sendFile"
+			],
+			[
+				"embed",
+				"embedded"
+			],
+			[
+				"res",
+				"result"
+			],
+			[
+				"noi",
+				"noimage_url"
+			],
+			[
+				"invite",
+				"_inviteUser"
+			],
+			[
+				"pen",
+				"pending_req"
+			],
+			[
+				"pe",
+				"pending_req"
+			],
+			[
+				"cw",
+				"cwun	React: componentWillUnmount: fn() { ... }"
+			],
+			[
+				"inv",
+				"invite_status"
+			],
+			[
+				"in",
+				"invite_status"
+			],
+			[
+				"sho",
+				"show_invitations"
+			],
+			[
+				"acc",
+				"_acceptInvite"
+			],
+			[
+				"rec",
+				"receiverdetails"
+			],
+			[
+				"dat",
+				"Date"
+			],
+			[
+				"use",
+				"userdetails"
+			],
+			[
+				"time",
+				"timestamp"
+			],
+			[
+				"chan",
+				"channel_name"
+			],
+			[
+				"s",
+				"status"
+			],
+			[
+				"sed",
+				"senderdetails"
+			],
+			[
+				"reject",
+				"reject_status"
+			],
+			[
+				"reje",
+				"reject_status"
+			],
+			[
+				"on",
+				"_onReject"
+			],
+			[
+				"rect",
+				"reject"
+			],
+			[
+				"show_",
+				"show_elem"
+			],
+			[
+				"channe",
+				"channel"
+			],
+			[
+				"co",
+				"cookie"
+			],
+			[
+				"chann",
+				"channel"
+			],
+			[
+				"users",
+				"userstatus"
+			],
+			[
+				"cla",
+				"className"
+			],
+			[
+				"prop",
+				"props	React: this.props."
+			],
+			[
+				"o",
+				"_onChange"
+			],
+			[
+				"U",
+				"UserStore"
+			],
+			[
+				"_se",
+				"_setUser"
+			],
+			[
+				"is",
+				"isSingleChat"
+			],
+			[
+				"con",
+				"containing"
+			],
+			[
+				"compo",
+				"shouldComponentUpdate"
+			],
+			[
+				"le",
+				"length-1"
+			],
+			[
+				"lo",
+				"log"
+			],
+			[
+				"cons",
+				"console"
+			],
+			[
+				"ge",
+				"getMessage"
+			],
+			[
+				"R",
+				"RoomStore"
+			],
+			[
+				"re",
+				"removeChangeListener"
+			],
+			[
+				"ro",
+				"router"
+			],
+			[
+				"pro",
+				"props	React: this.props."
+			],
+			[
+				"mat",
+				"matched"
+			],
+			[
+				"ma",
+				"matched"
+			],
+			[
+				"id",
+				"id_message"
+			],
+			[
+				"d",
+				"data"
+			],
+			[
+				"b",
+				"broadcast"
+			],
+			[
+				"activit",
+				"activities"
+			],
+			[
+				"dt",
+				"data"
+			],
+			[
+				"fu",
+				"funC"
+			],
+			[
+				"rooms",
+				"rooms"
+			],
+			[
+				"get",
+				"_getAllMessages"
+			],
+			[
+				"roo",
+				"rooms"
+			],
+			[
+				"si",
+				"SingleChatroom"
+			],
+			[
+				"e",
+				"elem"
+			],
+			[
+				"po",
+				"props	React: this.props."
+			],
+			[
+				"ha",
+				"HashTagActions"
+			],
+			[
+				"Ha",
+				"HashTagActions"
+			],
+			[
+				"set",
+				"setHashTag"
+			],
+			[
+				"gi",
+				"gis	React: getInitialState: fn() { return {...} } "
+			],
+			[
+				"cm",
+				"cdm	React: componentDidMount: fn() { ... }"
+			],
+			[
+				"se",
+				"session_id"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"rea",
+				"react-cookie"
+			],
+			[
+				"but",
+				"ButtonToolbar"
+			],
+			[
+				"dr",
+				"DropdownButton"
+			],
+			[
+				"l",
+				"logdata"
+			],
+			[
+				"dispa",
+				"dispatch"
+			],
+			[
+				"u",
+				"Users"
+			],
+			[
+				"com",
+				"component"
+			],
+			[
+				"req",
+				"require"
+			],
+			[
+				"bo",
+				"bodyParser"
+			],
+			[
+				"St",
+				"StoreWatchMixin"
+			],
+			[
+				"Lo",
+				"LoginAction"
+			],
+			[
+				"S",
+				"StoreWatchMixin"
+			],
+			[
+				"v",
+				"VisibilityFilters"
+			],
+			[
+				"to",
+				"TOGGLETODO"
+			],
+			[
+				"ad",
+				"ADDTODO"
+			],
+			[
+				"vi",
+				"visibleTodos"
+			],
+			[
+				"fil",
+				"FilterLink"
+			],
+			[
+				"di",
+				"dispatch"
+			],
+			[
+				"app",
+				"AppConstants"
+			],
+			[
+				"C",
+				"CatalogItem"
+			],
+			[
+				"ap",
+				"Appstore"
+			],
+			[
+				"A",
+				"AppStore"
+			],
+			[
+				"emit",
+				"emitChange"
+			],
+			[
+				"ev",
+				"EventEmitter"
+			],
+			[
+				"ca",
+				"_cartItems"
+			],
+			[
+				"fi",
+				"_findCartItem"
+			],
+			[
+				"Re",
+				"ReactDOM"
+			],
+			[
+				"hi",
+				"History"
+			],
+			[
+				"r",
+				"require"
+			],
+			[
+				"H",
+				"Home"
+			],
+			[
+				"rou",
+				"Route"
+			],
+			[
+				"sc",
+				"script"
+			],
+			[
+				"it",
+				"items"
+			],
+			[
+				"ite",
+				"item"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/var/www/html/angular1/tpl/app.html",
+			"settings":
+			{
+				"buffer_size": 1718,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/bititude/Documents/projects/work/public/index.html",
+			"settings":
+			{
+				"buffer_size": 7691,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/bititude/Documents/projects/work/public/app/app.js",
+			"settings":
+			{
+				"buffer_size": 3854,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"pas",
+				"Package Control: List Packages"
+			]
+		],
+		"width": 575.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/bititude/Documents/projects/foodx-web/client/app/main/main.html",
+		"/home/bititude/Documents/projects/MyApp/src/api/message/message.model.js",
+		"/home/bititude/Documents/projects/MyApp/src/api/message/message.controller.js",
+		"/home/bititude/Documents/projects/MyApp/src/environment/index.js",
+		"/home/bititude/Documents/projects/MyApp/src/components/Activity/Activity.scss",
+		"/home/bititude/Documents/projects/MyApp/src/components/ChatRoom/ChatRoom.js",
+		"/home/bititude/Documents/projects/MyApp/src/server.js",
+		"/home/bititude/Documents/projects/MyApp/src/utils/SocketUtils.js",
+		"/home/bititude/Documents/projects/MyApp/src/components/InviteModal/InviteModal.js",
+		"/home/bititude/Documents/projects/MyApp/src/actions/SocketActions.js",
+		"/home/bititude/Documents/projects/MyApp/src/components/ChatRoom/ChatRoom.scss",
+		"/home/bititude/Documents/projects/MyApp/src/components/CreateRoom/CreateRoom.js",
+		"/home/bititude/Documents/projects/MyApp/src/stores/RoomStore.js",
+		"/home/bititude/Documents/projects/MyApp/src/stores/MessageStore.js",
+		"/home/bititude/Documents/projects/MyApp/src/utils/WebApiUtils.js",
+		"/home/bititude/Documents/projects/MyApp/src/components/HomePage/HomePage.js",
+		"/home/bititude/Documents/projects/MyApp/src/components/ChatRoom/ChatBody.js",
+		"/home/bititude/Documents/projects/MyApp/src/actions/LoginActions.js",
+		"/home/bititude/Documents/projects/MyApp/src/actions/MessageActions.js",
+		"/etc/ssh/ssh_config",
+		"/home/bititude/.ssh/config",
+		"/home/bititude/Documents/projects/MyApp/src/components/Html/Html.js",
+		"/home/bititude/Documents/projects/MyApp/src/components/Navbar/Navbar.js",
+		"/home/bititude/Documents/projects/MyApp/src/components/LoginPage/LoginPage.js",
+		"/home/bititude/Documents/projects/MyApp/src/api/user/user.controller.js",
+		"/home/bititude/Documents/projects/MyApp/src/components/ChatRoom/Time.js",
+		"/home/bititude/Documents/projects/MyApp/src/components/HomePage/HomePage.scss",
+		"/home/bititude/Documents/projects/MyApp/src/components/InviteModal/InviteModal.scss",
+		"/home/bititude/Documents/projects/MyApp/src/config.js",
+		"/home/bititude/Documents/projects/MyApp/src/stores/UserStore.js",
+		"/home/bititude/Documents/projects/MyApp/src/api/session/session.model.js",
+		"/home/bititude/Documents/projects/MyApp/src/constants/ActionTypes.js",
+		"/home/bititude/Documents/projects/MyApp/src/components/Activity/Activity.js",
+		"/home/bititude/Documents/projects/MyApp/src/actions/UserActions.js",
+		"/home/bititude/Documents/projects/MyApp/src/actions/ServerActions.js",
+		"/home/bititude/Documents/projects/MyApp/src/routes.js",
+		"/home/bititude/Documents/projects/MyApp/src/public/favicon.ico",
+		"/home/bititude/Documents/myApp/docs/react-style-guide.md",
+		"/home/bititude/Documents/projects/MyApp/src/components/Authentication/Authentication.js",
+		"/home/bititude/Downloads/hcbackup/public/scripts/8a0e81d1.scripts.js",
+		"/home/bititude/.config/sublime-text-3/Packages/HTML-CSS-JS Prettify/HTMLPrettify.sublime-settings",
+		"/home/bititude/Documents/projects/MyApp/src/components/SingleChat/SingleChatroom.js",
+		"/home/bititude/Documents/projects/MyApp/build/server.js",
+		"/home/bititude/Documents/projects/MyApp/src/components/SingleChat/SingleChatroom.scss",
+		"/home/bititude/Documents/projects/MyApp/tools/start.js",
+		"/home/bititude/Documents/projects/MyApp/src/utils/HashyChatUtils.js",
+		"/home/bititude/Documents/projects/MyApp/src/api/user.js",
+		"/home/bititude/Documents/projects/MyApp/src/actions/HashTagActions.js",
+		"/home/bititude/Documents/projects/MyApp/src/client.js",
+		"/home/bititude/Documents/projects/MyApp/src/api/hashtag.js",
+		"/home/bititude/Documents/projects/MyApp/src/stores/HashyStore.js",
+		"/home/bititude/Documents/projects/MyApp/src/api/content.js",
+		"/home/bititude/Documents/projects/MyApp/src/components/App/App.js",
+		"/home/bititude/Documents/projects/MyApp/src/models/hashtags.js",
+		"/home/bititude/Documents/projects/MyApp/src/models/sessions.js",
+		"/home/bititude/Documents/projects/MyApp/src/components/Link/Link.js",
+		"/home/bititude/Documents/projects/MyApp/src/models/users.js",
+		"/home/bititude/Documents/projects/MyApp/src/models/messages.js",
+		"/home/bititude/Documents/projects/MyApp/src/models/hashtag.js",
+		"/home/bititude/.config/sublime-text-3/Packages/HTML-CSS-JS Prettify/.jsbeautifyrc",
+		"/home/bititude/Documents/projects/MyApp/src/components/CreateRoom/CreateRoom.scss",
+		"/home/bititude/Documents/projects/MyApp/README.md",
+		"/home/bititude/Documents/projects/MyApp/src/api/login.js",
+		"/home/bititude/Documents/projects/MyApp/src/components/LoginPage/LoginPage.scss",
+		"/home/bititude/Documents/projects/MyApp/src/components/HomePage/package.json",
+		"/home/bititude/Documents/projects/MyApp/src/core/Dispatcher.js",
+		"/home/bititude/Documents/projects/MyApp/package.json",
+		"/home/bititude/Documents/projects/hashychat/MyApp/src/api/login.js",
+		"/home/bititude/Documents/projects/hashychat/MyApp/src/models/users.js",
+		"/home/bititude/Documents/projects/hashychat/MyApp/src/environment/index.js",
+		"/home/bititude/Documents/projects/hashychat/MyApp/src/config.js",
+		"/home/bititude/Documents/projects/hashychat/MyApp/src/components/RegisterPage/RegisterPage.js",
+		"/home/bititude/Documents/projects/hashychat/MyApp/src/components/Navbar/Navbar.js",
+		"/home/bititude/Documents/projects/hashychat/MyApp/src/models/sessions.js",
+		"/home/bititude/Documents/projects/hashychat/MyApp/src/components/HomePage/HomePage.js",
+		"/home/bititude/Documents/projects/hashychat/MyApp/src/components/RegisterPage/package.json",
+		"/home/bititude/Documents/projects/hashychat/MyApp/src/components/Navbar/Navbar.scss",
+		"/home/bititude/Documents/projects/hashychat/MyApp/src/client.js",
+		"/home/bititude/Documents/projects/hashychat/MyApp/src/utils/HashyChatUtils.js",
+		"/home/bititude/Documents/projects/hashychat/MyApp/src/components/HomePage/package.json",
+		"/home/bititude/Documents/projects/hashychat/MyApp/src/components/HomePage/HomePage.scss",
+		"/home/bititude/Documents/projects/hashychat/MyApp/src/auth/passport.js",
+		"/home/bititude/Documents/projects/hashychat/MyApp/src/main.js",
+		"/home/bititude/Documents/projects/hashychat/MyApp/src/actions/LoginActions.js",
+		"/home/bititude/Documents/projects/hashychat/MyApp/src/routes.js",
+		"/home/bititude/Documents/projects/hashychat/MyApp/src/components/LoginPage/LoginPage.js",
+		"/home/bititude/Documents/projects/hashychat/MyApp/src/components/LoginPage/LoginPage.scss",
+		"/home/bititude/Documents/projects/hashychat/MyApp/src/stores/HashyStore.js",
+		"/home/bititude/Documents/projects/hashychat/MyApp/src/constants/ActionTypes.js",
+		"/home/bititude/Documents/projects/hashychat/MyApp/src/server.js",
+		"/home/bititude/Documents/projects/hashychat/MyApp/src/components/App/App.js",
+		"/home/bititude/Documents/projects/hashychat/MyApp/src/core/Dispatcher.js",
+		"/home/bititude/Documents/projects/hashychat/MyApp/package.json",
+		"/home/bititude/Documents/projects/hashychat/MyApp/src/components/Html/Html.js",
+		"/home/bititude/Documents/myApp/src/components/Navbar/Navbar.js",
+		"/home/bititude/Documents/myApp/src/core/fetch/fetch.client.js",
+		"/home/bititude/Documents/myApp/package.json",
+		"/home/bititude/Documents/myApp/src/utils/LoginUserUtils.js",
+		"/home/bititude/Documents/myApp/src/actions/LoginAction.js",
+		"/home/bititude/Documents/myApp/src/api/login.js",
+		"/home/bititude/Documents/myApp/src/config/config.js",
+		"/home/bititude/Documents/myApp/src/routes.js",
+		"/home/bititude/Documents/myApp/src/mixins/StoreWatchMixin.js",
+		"/home/bititude/Documents/myApp/src/stores/AppStore.js",
+		"/home/bititude/Documents/myApp/src/server.js",
+		"/home/bititude/Documents/myApp/src/components/Link/Link.js",
+		"/home/bititude/Documents/myApp/src/constants/ActionTypes.js",
+		"/home/bititude/Documents/myApp/src/components/Navigation/Navigation.js",
+		"/home/bititude/Documents/myApp/src/decorators/withStyles.js",
+		"/home/bititude/Documents/myApp/src/components/Html/Html.js",
+		"/home/bititude/Documents/myApp/src/components/Header/Navbar.js",
+		"/home/bititude/Documents/myApp/src/api/content.js",
+		"/home/bititude/Documents/myApp/build/content/about.jade",
+		"/home/bititude/Documents/redux/HashyChat/lib/config/express.js",
+		"/home/bititude/Documents/redux/HashyChat/public/scripts/containers/user.js",
+		"/home/bititude/Documents/redux/HashyChat/public/scripts/action/app-actions.js",
+		"/home/bititude/Documents/redux/HashyChat/public/scripts/stores/app-store.js",
+		"/home/bititude/Documents/HashyChat/react-hashychat/public/scripts/components/Home.js",
+		"/home/bititude/Documents/redux/todo/scripts/stores/app-store.js",
+		"/home/bititude/Documents/redux/todo/scripts/components/app.js",
+		"/home/bititude/Documents/redux/HashyChat/public/scripts/components/app.js",
+		"/home/bititude/Documents/redux/todo/scripts/main.js",
+		"/home/bititude/Documents/redux/todo/scripts/reducers/reducer.js",
+		"/home/bititude/Documents/redux/todo/index.html",
+		"/home/bititude/Documents/redux/todo/scripts/action/app-actions.js",
+		"/home/bititude/Documents/redux/HashyChat/package.json",
+		"/home/bititude/Documents/redux/todo/scripts/constants/app-constants.js",
+		"/home/bititude/Documents/redux/HashyChat/lib/config/env/production.js"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/home/bititude/Documents/myApp/",
+			"/home/bititude/Documents/projects/hashychat/MyApp",
+			"/home/bititude/Documents/myApp",
+			"/home/bititude/Documents/myApp/",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"pace",
+			"array",
+			"_activelist",
+			"arr",
+			"activelist",
+			"_activelist",
+			"activelist",
+			"scroll",
+			"h5",
+			"console.log",
+			"){\n",
+			"scrollheight",
+			"InviteModal",
+			"_goChannel",
+			"closeModal",
+			"showWarning",
+			")",
+			"return(",
+			"show_newelem",
+			"0",
+			"showWarning",
+			"0",
+			"1",
+			"0",
+			"show_span",
+			"connectChannel",
+			"connectchannel",
+			"active_users",
+			"var",
+			"_showMessages",
+			"getActiveUsers",
+			"_activeusers",
+			"getActivities",
+			"this.props.channel",
+			"this.state.channels",
+			"_leaveChannels",
+			"isMessagesLoaded",
+			"createdAt",
+			"show_span",
+			"show_elem",
+			"show_newelem",
+			"_show_users",
+			"active_users",
+			"p",
+			"character",
+			"_show_users",
+			"active_users",
+			"invite_status",
+			");",
+			"getUserStatus",
+			"now",
+			"var",
+			"time",
+			"Time",
+			"getActivities",
+			"*",
+			"/home/ubuntu/.nvm/versions/node/v5.0.0/bin/",
+			" /usr/bin/env",
+			"[];\n",
+			"data",
+			"console",
+			"integrate",
+			"inviteAction",
+			"5",
+			"noimage_url",
+			"300",
+			"400",
+			"300",
+			" *",
+			"connectChannel",
+			"invite_status",
+			"pending_req",
+			"reject_btn",
+			"state",
+			"ChatRoom",
+			"reject_btn",
+			"anchor",
+			"isSingleChat",
+			"console",
+			"_onListInvites",
+			"userstatus",
+			"this.state.userstatus",
+			"button",
+			"_activelist",
+			"activelist",
+			"ActiveList",
+			"activelist",
+			"channel",
+			"data",
+			"_activelist",
+			"console.log(",
+			"console",
+			"sender",
+			"reject_status",
+			"_rejectStatus",
+			"rejectInvite",
+			"_onReject",
+			"        </",
+			"show_modal",
+			"user_details",
+			"receiver",
+			"userdetails",
+			"userstatus",
+			"status",
+			"user_status",
+			"button",
+			"Button",
+			"false",
+			".state",
+			"show_textbox",
+			":",
+			"user",
+			"sender",
+			"channel",
+			"this.props.channel.tag",
+			"receiver",
+			"_createRoom",
+			"receiver",
+			"reciever",
+			"user",
+			"checkActiveUser",
+			"show",
+			"socket id updated",
+			"username",
+			"show_message",
+			"favicon.ico",
+			"tile-wide.png",
+			"span"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/var/www/html/angular1/tpl/app.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1718,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								23,
+								1718
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 108.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/home/bititude/Documents/projects/work/public/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7691,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7691,
+								7691
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 90.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/home/bititude/Documents/projects/work/public/app/app.js",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 3854,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 112.0
+	},
+	"pinned_build_system": "",
+	"project": "work.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"react-hashychat/public/scripts/components/App.js"
+			],
+			[
+				"insta",
+				"node_modules/mongoose/node_modules/bson/node_modules/bson-ext/node_modules/node-pre-gyp/lib/install.js"
+			],
+			[
+				"tod",
+				"todo/Animals.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Documents/projects/foodx-web/server/api/customers/homel.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 268.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

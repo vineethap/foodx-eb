@@ -9,8 +9,8 @@ class MainController {
     this.socket = socket;
     this.awesomeThings = [];
     this.isLoggedIn = Auth.isLoggedIn();
-    console.log(this.isLoggedIn);
-
+    this.menuOpened=false;
+    this.getCurrentUser = Auth.getCurrentUser;
     $scope.$on('$destroy', function() {
       socket.unsyncUpdates('thing');
     });
@@ -33,12 +33,21 @@ class MainController {
   deleteThing(thing) {
     this.$http.delete('/api/things/' + thing._id);
   }
+  toggleMenu(event){
+    this.menuOpened = !(this.menuOpened);
+    event.stopPropagation();
+  }
+  // logout(){
+  //  this.logout()
+   
+  // }
 }
 
 angular.module('foodXApp')
   .component('main', {
     templateUrl: 'app/main/main.html',
-    controller: MainController
+    controller: MainController,
+    controllerAs: 'vm'
   });
 
 })();

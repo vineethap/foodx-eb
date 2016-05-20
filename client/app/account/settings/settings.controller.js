@@ -4,7 +4,6 @@ class SettingsController {
   constructor(Auth) {
     this.errors = {};
     this.submitted = false;
-
     this.Auth = Auth;
   }
 

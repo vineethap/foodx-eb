@@ -1,12 +1,53 @@
-<div class="container">
-  <p>The delete user and user index api routes are restricted to users with the 'admin' role.</p>
-  <ul class="list-group user-list">
-    <li class="list-group-item" ng-repeat="user in admin.users">
-	    <div class="user-info">
-	        <strong>{{user.name}}</strong><br>
-	        <span class="text-muted">{{user.email}}</span>
-	    </div>
-        <a ng-click="admin.delete(user)" class="trash"><span class="fa fa-trash fa-2x"></span></a>
-    </li>
-  </ul>
+
+<script type="text/ng-template" id="myModalContent.html">
+  <div class="modal-body m-t-20">
+    <p ng-if="!vm.currentUser">Are you sure you want to 
+      <strong ng-if="vm.user.active">disable </strong>
+      <strong ng-if="!vm.user.active">enable </strong>
+      this user ?
+    </p>
+    <p ng-if="vm.currentUser">You cannot disable youeself</p>
+  </div>
+  <div class="modal-footer" ng-if="!vm.currentUser">
+    <button class="btn btn-primary" type="button" ng-click="vm.delete()">OK</button>
+    <button class="btn btn-warning" type="button" ng-click="$dismiss()">Cancel</button>
+  </div>
+</script>
+
+<div class="page-content-wrapper">
+<div class="content">
+<div class="container" ng-init="loadAll()">
+<br/>
+
+  <button type="button" class="btn btn-primary" ng-click="admin.open('lg',true)" >+Admin</button>
+  <br/>
+  <br/>
+
+  <br/>
+  <table class="table table-striped">
+    <thead>
+      <tr role="row"  >
+        <th>#</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Mail id</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr role="row" ng-repeat="user in admin.users track by $index" ng-class="user.active?'': 'disabled'">
+        <td>{{$index + 1}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.lastname}}</td>
+        <td>{{user.email}}</td>
+        <td ng-click="admin.delete('sm',user)">
+          <button class="btn btn-danger" ng-if="user.active">Disable</button>
+          <button class="btn btn-success" ng-if="!user.active">Enable</button>
+        </td>
+        <td><a class="btn btn-info" ui-sref="profile({id:user._id})"><i class="fa fa-eye fa-1x pointer" aria-hidden="true" ></i></a></td>
+      </tr>
+    </tbody>
+  </table>
 </div>
+</div>
+</div>
+ <!-- <span class="fa fa-eye fa-2x" aria-hidden="true"></span> -->

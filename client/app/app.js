@@ -4,6 +4,7 @@ angular.module('foodXApp', [
   'foodXApp.auth',
   'foodXApp.admin',
   'foodXApp.constants',
+  'oc.lazyLoad', 
   'ngCookies',
   'ngResource',
   'ngSanitize',
@@ -15,7 +16,7 @@ angular.module('foodXApp', [
   .config(function($urlRouterProvider, $locationProvider) {
     $urlRouterProvider
     
-      .otherwise('/');
+      .otherwise('/dashboard');
 
     $locationProvider.html5Mode(true);
   });

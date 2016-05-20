@@ -1,0 +1,1139 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"is",
+				"isAdmin"
+			],
+			[
+				"lo",
+				"location"
+			],
+			[
+				"re",
+				"req"
+			],
+			[
+				"user",
+				"userId"
+			],
+			[
+				"th",
+				"this"
+			],
+			[
+				"p",
+				"p"
+			],
+			[
+				"str",
+				"String"
+			],
+			[
+				"the",
+				"then"
+			],
+			[
+				"u",
+				"uibModal"
+			],
+			[
+				"m",
+				"Modal"
+			],
+			[
+				"st",
+				"status"
+			],
+			[
+				"ad",
+				"Add"
+			],
+			[
+				"sta",
+				"status"
+			],
+			[
+				"stat",
+				"status"
+			],
+			[
+				"a",
+				"Auth"
+			],
+			[
+				"ac",
+				"activities"
+			],
+			[
+				"arr",
+				"array"
+			],
+			[
+				"acti",
+				"_activelist"
+			],
+			[
+				"_",
+				"_activelist"
+			],
+			[
+				"act",
+				"activelist"
+			],
+			[
+				"mess",
+				"messages"
+			],
+			[
+				"pr",
+				"provider_url"
+			],
+			[
+				"cha",
+				"channel"
+			],
+			[
+				"ch",
+				"channel_list"
+			],
+			[
+				"cane",
+				"channel_list"
+			],
+			[
+				"us",
+				"userdetails"
+			],
+			[
+				"w",
+				"warning"
+			],
+			[
+				"me",
+				"members"
+			],
+			[
+				"channel",
+				"channels"
+			],
+			[
+				"mes",
+				"message"
+			],
+			[
+				"msg",
+				"msg_time"
+			],
+			[
+				"activ",
+				"activity"
+			],
+			[
+				"messa",
+				"message"
+			],
+			[
+				"sh",
+				"show"
+			],
+			[
+				"chara",
+				"characters"
+			],
+			[
+				"show",
+				"show_span"
+			],
+			[
+				"ti",
+				"Time"
+			],
+			[
+				"da",
+				"data"
+			],
+			[
+				"sen",
+				"sendFile"
+			],
+			[
+				"embed",
+				"embedded"
+			],
+			[
+				"res",
+				"result"
+			],
+			[
+				"noi",
+				"noimage_url"
+			],
+			[
+				"invite",
+				"_inviteUser"
+			],
+			[
+				"pen",
+				"pending_req"
+			],
+			[
+				"pe",
+				"pending_req"
+			],
+			[
+				"cw",
+				"cwun	React: componentWillUnmount: fn() { ... }"
+			],
+			[
+				"inv",
+				"invite_status"
+			],
+			[
+				"in",
+				"invite_status"
+			],
+			[
+				"sho",
+				"show_invitations"
+			],
+			[
+				"acc",
+				"_acceptInvite"
+			],
+			[
+				"rec",
+				"receiverdetails"
+			],
+			[
+				"dat",
+				"Date"
+			],
+			[
+				"use",
+				"userdetails"
+			],
+			[
+				"time",
+				"timestamp"
+			],
+			[
+				"chan",
+				"channel_name"
+			],
+			[
+				"s",
+				"status"
+			],
+			[
+				"sed",
+				"senderdetails"
+			],
+			[
+				"reject",
+				"reject_status"
+			],
+			[
+				"reje",
+				"reject_status"
+			],
+			[
+				"on",
+				"_onReject"
+			],
+			[
+				"rect",
+				"reject"
+			],
+			[
+				"show_",
+				"show_elem"
+			],
+			[
+				"channe",
+				"channel"
+			],
+			[
+				"co",
+				"cookie"
+			],
+			[
+				"chann",
+				"channel"
+			],
+			[
+				"users",
+				"userstatus"
+			],
+			[
+				"cla",
+				"className"
+			],
+			[
+				"prop",
+				"props	React: this.props."
+			],
+			[
+				"o",
+				"_onChange"
+			],
+			[
+				"U",
+				"UserStore"
+			],
+			[
+				"_se",
+				"_setUser"
+			],
+			[
+				"con",
+				"containing"
+			],
+			[
+				"compo",
+				"shouldComponentUpdate"
+			],
+			[
+				"le",
+				"length-1"
+			],
+			[
+				"cons",
+				"console"
+			],
+			[
+				"ge",
+				"getMessage"
+			],
+			[
+				"R",
+				"RoomStore"
+			],
+			[
+				"ro",
+				"router"
+			],
+			[
+				"pro",
+				"props	React: this.props."
+			],
+			[
+				"mat",
+				"matched"
+			],
+			[
+				"ma",
+				"matched"
+			],
+			[
+				"id",
+				"id_message"
+			],
+			[
+				"d",
+				"data"
+			],
+			[
+				"b",
+				"broadcast"
+			],
+			[
+				"activit",
+				"activities"
+			],
+			[
+				"dt",
+				"data"
+			],
+			[
+				"fu",
+				"funC"
+			],
+			[
+				"rooms",
+				"rooms"
+			],
+			[
+				"get",
+				"_getAllMessages"
+			],
+			[
+				"roo",
+				"rooms"
+			],
+			[
+				"si",
+				"SingleChatroom"
+			],
+			[
+				"e",
+				"elem"
+			],
+			[
+				"po",
+				"props	React: this.props."
+			],
+			[
+				"ha",
+				"HashTagActions"
+			],
+			[
+				"Ha",
+				"HashTagActions"
+			],
+			[
+				"set",
+				"setHashTag"
+			],
+			[
+				"gi",
+				"gis	React: getInitialState: fn() { return {...} } "
+			],
+			[
+				"cm",
+				"cdm	React: componentDidMount: fn() { ... }"
+			],
+			[
+				"se",
+				"session_id"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"rea",
+				"react-cookie"
+			],
+			[
+				"but",
+				"ButtonToolbar"
+			],
+			[
+				"dr",
+				"DropdownButton"
+			],
+			[
+				"l",
+				"logdata"
+			],
+			[
+				"dispa",
+				"dispatch"
+			],
+			[
+				"com",
+				"component"
+			],
+			[
+				"req",
+				"require"
+			],
+			[
+				"bo",
+				"bodyParser"
+			],
+			[
+				"St",
+				"StoreWatchMixin"
+			],
+			[
+				"Lo",
+				"LoginAction"
+			],
+			[
+				"S",
+				"StoreWatchMixin"
+			],
+			[
+				"v",
+				"VisibilityFilters"
+			],
+			[
+				"to",
+				"TOGGLETODO"
+			],
+			[
+				"vi",
+				"visibleTodos"
+			],
+			[
+				"fil",
+				"FilterLink"
+			],
+			[
+				"di",
+				"dispatch"
+			],
+			[
+				"app",
+				"AppConstants"
+			],
+			[
+				"C",
+				"CatalogItem"
+			],
+			[
+				"ap",
+				"Appstore"
+			],
+			[
+				"A",
+				"AppStore"
+			],
+			[
+				"emit",
+				"emitChange"
+			],
+			[
+				"ev",
+				"EventEmitter"
+			],
+			[
+				"ca",
+				"_cartItems"
+			],
+			[
+				"fi",
+				"_findCartItem"
+			],
+			[
+				"Re",
+				"ReactDOM"
+			],
+			[
+				"hi",
+				"History"
+			],
+			[
+				"r",
+				"require"
+			],
+			[
+				"H",
+				"Home"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/home/bititude/Documents/bititude/work/public/app/main/leave/leave.html",
+			"settings":
+			{
+				"buffer_size": 29748,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/bititude/Documents/bititude/work/public/app/main/appraisal/appraisal.directive.js",
+			"settings":
+			{
+				"buffer_size": 2341,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/bititude/Documents/bititude/work/public/app/main/appraisal/appraisal.html",
+			"settings":
+			{
+				"buffer_size": 11658,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/bititude/Documents/bititude/work/public/app/main/appraisal/form/form.html",
+			"settings":
+			{
+				"buffer_size": 32447,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"pas",
+				"Package Control: List Packages"
+			]
+		],
+		"width": 575.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/bititude/Documents/bititude/work",
+		"/home/bititude/Documents/bititude/work/components",
+		"/home/bititude/Documents/bititude/work/config",
+		"/home/bititude/Documents/bititude/work/models",
+		"/home/bititude/Documents/bititude/work/public",
+		"/home/bititude/Documents/bititude/work/public/app",
+		"/home/bititude/Documents/bititude/work/public/app/main",
+		"/home/bititude/Documents/bititude/work/public/app/main/appraisal",
+		"/home/bititude/Documents/bititude/work/public/app/main/appraisal/form",
+		"/home/bititude/Documents/bititude/work/public/app/main/documents",
+		"/home/bititude/Documents/bititude/work/public/app/main/leave",
+		"/home/bititude/Documents/bititude/work/routes"
+	],
+	"file_history":
+	[
+		"/home/bititude/Documents/bititude/work/public/app/main/leave/leave.controller.js",
+		"/home/bititude/Documents/projects/foodx-web/client/app/main/main.less",
+		"/home/bititude/Documents/projects/foodx-web/client/app/account/login/login.html",
+		"/home/bititude/Documents/projects/foodx-web/client/app/main/main.controller.js",
+		"/home/bititude/Documents/bititude/work/public/app/app.js",
+		"/home/bititude/Documents/projects/foodx-web/client/components/sidebar/sidebar.controller.js",
+		"/home/bititude/Documents/projects/foodx-web/client/components/sidebar/sidebar.html",
+		"/home/bititude/Documents/projects/foodx-web/client/app/main/main.html",
+		"/home/bititude/Documents/projects/foodx-web/client/index.html",
+		"/home/bititude/Documents/projects/foodx-web/client/app/account/settings/settings.html",
+		"/home/bititude/Documents/projects/foodx-web/client/app/profile/profile.html",
+		"/home/bititude/Documents/projects/foodx-web/client/components/sidebar/sidebar.directive.js",
+		"/home/bititude/Documents/projects/foodx-web/client/app/Chefs/chefs.html",
+		"/home/bititude/Documents/projects/foodx-web/client/app/admin/admin.router.js",
+		"/home/bititude/Documents/projects/foodx-web/client/app/employees/employees.router.js",
+		"/home/bititude/Documents/projects/foodx-web/client/pages/js/pages.js",
+		"/home/bititude/Documents/projects/foodx-web/client/app/Chefs/chefs.router.js",
+		"/home/bititude/Documents/projects/foodx-web/client/app/profile/profile.router.js",
+		"/home/bititude/Documents/projects/foodx-web/client/app/template.html",
+		"/home/bititude/Documents/projects/foodx-web/client/app/admin/admin.html",
+		"/home/bititude/Documents/projects/foodx-web/client/app/employees/employees.html",
+		"/home/bititude/Documents/projects/foodx-web/client/app/account/account.js",
+		"/home/bititude/Documents/projects/foodx-web/client/app/app.js",
+		"/home/bititude/Documents/angular1/tpl/dashboard.html",
+		"/home/bititude/Documents/projects/foodx-web/client/assets/js/directives/pg-sidebar.js",
+		"/home/bititude/Documents/projects/foodx-web/client/assets/js/config.js",
+		"/home/bititude/Documents/projects/foodx-web/client/app/main/main.js",
+		"/home/bititude/Documents/projects/foodx-web/client/assets/js/main.js",
+		"/home/bititude/Documents/projects/foodx-web/server/api/user/user.controller.js",
+		"/home/bititude/Documents/projects/foodx-web/client/assets/js/directives/pg-search.js",
+		"/home/bititude/Documents/projects/foodx-web/client/assets/js/directives/pg-tab.js",
+		"/home/bititude/Documents/projects/foodx-web/client/assets/js/controllers/vector_map.js",
+		"/home/bititude/Documents/projects/foodx-web/client/assets/js/controllers/treeview.js",
+		"/home/bititude/Documents/projects/foodx-web/client/assets/js/controllers/tables.js",
+		"/home/bititude/Documents/projects/foodx-web/client/assets/js/controllers/search.js",
+		"/home/bititude/Documents/projects/foodx-web/client/assets/js/controllers/portlets.js",
+		"/home/bititude/Documents/projects/foodx-web/client/assets/js/controllers/notifications.js",
+		"/home/bititude/Documents/projects/foodx-web/client/assets/js/controllers/nestable.js",
+		"/home/bititude/Documents/projects/foodx-web/client/assets/js/controllers/modals.js",
+		"/home/bititude/Documents/projects/foodx-web/client/assets/js/controllers/icons.js",
+		"/home/bititude/Documents/projects/foodx-web/client/assets/js/controllers/google_map.js",
+		"/home/bititude/Documents/projects/foodx-web/client/assets/js/controllers/gallery.js",
+		"/home/bititude/Documents/projects/foodx-web/client/assets/js/controllers/forms_wizard.js",
+		"/home/bititude/Documents/projects/foodx-web/client/assets/js/controllers/forms_layouts.js",
+		"/home/bititude/Documents/projects/foodx-web/client/assets/js/controllers/forms_elements.js",
+		"/home/bititude/Documents/projects/foodx-web/client/assets/js/controllers/dataTables.js",
+		"/home/bititude/Documents/projects/foodx-web/client/assets/js/controllers/dashboard.js",
+		"/home/bititude/Documents/projects/foodx-web/client/assets/js/controllers/charts.js",
+		"/home/bititude/Documents/projects/foodx-web/client/assets/js/controllers/builder.js",
+		"/home/bititude/Documents/projects/foodx-web/client/assets/js/apps/calendar/calendar.js",
+		"/home/bititude/Documents/projects/foodx-web/client/assets/js/apps/social/social.js",
+		"/home/bititude/Documents/projects/foodx-web/client/assets/js/directives/pg-quickview.js",
+		"/home/bititude/Documents/projects/foodx-web/client/assets/js/directives/pg-portlet.js",
+		"/home/bititude/Documents/projects/foodx-web/client/assets/js/directives/pg-navigate.js",
+		"/home/bititude/Documents/projects/foodx-web/client/assets/js/config.lazyload.js",
+		"/home/bititude/Documents/projects/foodx-web/client/assets/js/apps/email/service.js",
+		"/home/bititude/Documents/projects/foodx-web/client/assets/js/apps/email/email.js",
+		"/home/bititude/Documents/projects/foodx-web/client/assets/js/directives/pg-form-group.js",
+		"/home/bititude/Documents/projects/foodx-web/client/assets/js/directives/skycons.js",
+		"/home/bititude/Documents/projects/foodx-web/client/assets/js/app.js",
+		"/home/bititude/Documents/projects/foodx-web/client/assets/js/directives/cs-select.js",
+		"/home/bititude/Documents/projects/foodx-web/client/assets/js/directives/pg-dropdown.js",
+		"/var/www/html/angular1/index.html",
+		"/var/www/html/angular1/tpl/app.html",
+		"/home/bititude/Documents/projects/foodx-web/client/app/profile/profile.controller.js",
+		"/home/bititude/Documents/projects/foodx-web/client/components/navbar/navbar.controller.js",
+		"/var/www/html/angular1/tpl/dashboard.html",
+		"/home/bititude/Documents/projects/foodx-web/server/auth/local/passport.js",
+		"/home/bititude/Documents/projects/foodx-web/client/components/auth/auth.service.js",
+		"/home/bititude/Documents/projects/foodx-web/client/components/auth/user.service.js",
+		"/home/bititude/Documents/projects/foodx-web/client/app/Chefs/chefs.controller.js",
+		"/home/bititude/Documents/projects/foodx-web/client/app/employees/employees.controller.js",
+		"/home/bititude/Documents/projects/foodx-web/client/components/navbar/navbar.html",
+		"/home/bititude/Documents/projects/foodx-web/server/api/user/index.js",
+		"/home/bititude/Documents/projects/foodx-web/client/app/admin/admin.less",
+		"/home/bititude/Documents/projects/foodx-web/client/app/admin/admin.controller.js",
+		"/home/bititude/Documents/projects/foodx-web/client/app/account/settings/settings.controller.js",
+		"/home/bititude/Documents/projects/foodx-web/client/app/employees/ModalInstanceCtrl.js",
+		"/home/bititude/Documents/projects/foodx-web/server/api/user/user.model.js",
+		"/home/bititude/Documents/projects/foodx-web/client/app/profile/profile.module.js",
+		"/home/bititude/Documents/projects/foodx-web/client/app/account/register/register.controller.js",
+		"/home/bititude/Documents/projects/foodx-web/client/app/account/register/register.html",
+		"/home/bititude/Documents/projects/foodx-web/client/components/modal/modal.service.js",
+		"/home/bititude/Documents/projects/foodx-web/client/app/admin/admin.module.js",
+		"/home/bititude/Documents/projects/foodx-web/client/app/Chefs/chefs.module.js",
+		"/home/bititude/Documents/projects/foodx-web/server/config/environment/development.js",
+		"/home/bititude/Documents/projects/foodx-web/client/components/util/util.service.js",
+		"/home/bititude/Documents/projects/foodx-web/client/app/employees/employees.module.js",
+		"/home/bititude/Documents/projects/foodx-web/client/app/account/signup/signup.html",
+		"/home/bititude/Documents/projects/foodx-web/client/app/account/signup/signup.controller.js",
+		"/home/bititude/Documents/projects/foodx-web/client/app/account/login/login.controller.js",
+		"/home/bititude/Documents/projects/foodX/client/components/navbar/navbar.controller.js",
+		"/home/bititude/Documents/projects/MyApp/src/api/message/message.model.js",
+		"/home/bititude/Documents/projects/MyApp/src/api/message/message.controller.js",
+		"/home/bititude/Documents/projects/MyApp/src/environment/index.js",
+		"/home/bititude/Documents/projects/MyApp/src/components/Activity/Activity.scss",
+		"/home/bititude/Documents/projects/MyApp/src/components/ChatRoom/ChatRoom.js",
+		"/home/bititude/Documents/projects/MyApp/src/server.js",
+		"/home/bititude/Documents/projects/MyApp/src/utils/SocketUtils.js",
+		"/home/bititude/Documents/projects/MyApp/src/components/InviteModal/InviteModal.js",
+		"/home/bititude/Documents/projects/MyApp/src/actions/SocketActions.js",
+		"/home/bititude/Documents/projects/MyApp/src/components/ChatRoom/ChatRoom.scss",
+		"/home/bititude/Documents/projects/MyApp/src/components/CreateRoom/CreateRoom.js",
+		"/home/bititude/Documents/projects/MyApp/src/stores/RoomStore.js",
+		"/home/bititude/Documents/projects/MyApp/src/stores/MessageStore.js",
+		"/home/bititude/Documents/projects/MyApp/src/utils/WebApiUtils.js",
+		"/home/bititude/Documents/projects/MyApp/src/components/HomePage/HomePage.js",
+		"/home/bititude/Documents/projects/MyApp/src/components/ChatRoom/ChatBody.js",
+		"/home/bititude/Documents/projects/MyApp/src/actions/LoginActions.js",
+		"/home/bititude/Documents/projects/MyApp/src/actions/MessageActions.js",
+		"/etc/ssh/ssh_config",
+		"/home/bititude/.ssh/config",
+		"/home/bititude/Documents/projects/MyApp/src/components/Html/Html.js",
+		"/home/bititude/Documents/projects/MyApp/src/components/Navbar/Navbar.js",
+		"/home/bititude/Documents/projects/MyApp/src/components/LoginPage/LoginPage.js",
+		"/home/bititude/Documents/projects/MyApp/src/api/user/user.controller.js",
+		"/home/bititude/Documents/projects/MyApp/src/components/ChatRoom/Time.js",
+		"/home/bititude/Documents/projects/MyApp/src/components/HomePage/HomePage.scss",
+		"/home/bititude/Documents/projects/MyApp/src/components/InviteModal/InviteModal.scss",
+		"/home/bititude/Documents/projects/MyApp/src/config.js",
+		"/home/bititude/Documents/projects/MyApp/src/stores/UserStore.js",
+		"/home/bititude/Documents/projects/MyApp/src/api/session/session.model.js",
+		"/home/bititude/Documents/projects/MyApp/src/constants/ActionTypes.js",
+		"/home/bititude/Documents/projects/MyApp/src/components/Activity/Activity.js",
+		"/home/bititude/Documents/projects/MyApp/src/actions/UserActions.js",
+		"/home/bititude/Documents/projects/MyApp/src/actions/ServerActions.js",
+		"/home/bititude/Documents/projects/MyApp/src/routes.js",
+		"/home/bititude/Documents/projects/MyApp/src/public/favicon.ico"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"<open folders>",
+			"/home/bititude/Documents/myApp/",
+			"/home/bititude/Documents/projects/hashychat/MyApp",
+			"/home/bititude/Documents/myApp",
+			"/home/bititude/Documents/myApp/",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"star-r",
+			"button",
+			"NavbarController",
+			"navbar",
+			"sidebarMouseLeave",
+			"scrollbar",
+			"app",
+			"Apples",
+			"APP",
+			"app",
+			"App",
+			"app",
+			"App",
+			"app",
+			"AppCtrl",
+			"app",
+			"AppCtrl",
+			"app",
+			"show",
+			"h1",
+			"span",
+			"employees",
+			"AdminController",
+			"name",
+			"span",
+			"bower_",
+			"form.",
+			"form",
+			"span",
+			"p",
+			"$ctrl",
+			"$ctrl\n$ctrl",
+			"$",
+			"vm",
+			"$",
+			"   $",
+			"Modal",
+			"EmployeeController",
+			"modal",
+			"admin",
+			"AdminController",
+			"admin",
+			"settings",
+			"2",
+			"isLoggedIn",
+			"SignupController",
+			"safeCb",
+			"$ctrl",
+			"main",
+			"$scope",
+			"scope",
+			"array",
+			"_activelist",
+			"arr",
+			"activelist",
+			"_activelist",
+			"activelist",
+			"scroll",
+			"h5",
+			"console.log",
+			"){\n",
+			"scrollheight",
+			"InviteModal",
+			"_goChannel",
+			"closeModal",
+			"showWarning",
+			")",
+			"return(",
+			"show_newelem",
+			"0",
+			"showWarning",
+			"0",
+			"1",
+			"0",
+			"show_span",
+			"connectChannel",
+			"connectchannel",
+			"active_users",
+			"var",
+			"_showMessages",
+			"getActiveUsers",
+			"_activeusers",
+			"getActivities",
+			"this.props.channel",
+			"this.state.channels",
+			"_leaveChannels",
+			"isMessagesLoaded",
+			"createdAt",
+			"show_span",
+			"show_elem",
+			"show_newelem",
+			"_show_users",
+			"active_users",
+			"p",
+			"character",
+			"_show_users",
+			"active_users",
+			"invite_status",
+			");",
+			"getUserStatus",
+			"now",
+			"var",
+			"time",
+			"Time",
+			"getActivities",
+			"*",
+			"/home/ubuntu/.nvm/versions/node/v5.0.0/bin/",
+			" /usr/bin/env",
+			"[];\n",
+			"data",
+			"console",
+			"integrate",
+			"inviteAction",
+			"5",
+			"noimage_url",
+			"300",
+			"400",
+			"300",
+			" *",
+			"connectChannel",
+			"invite_status",
+			"pending_req",
+			"reject_btn",
+			"state",
+			"ChatRoom",
+			"reject_btn",
+			"anchor",
+			"isSingleChat"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/home/bititude/Documents/bititude/work/public/app/main/leave/leave.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 29748,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1991,
+								1991
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 720.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/home/bititude/Documents/bititude/work/public/app/main/appraisal/appraisal.directive.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2341,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1621,
+								1621
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 270.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/home/bititude/Documents/bititude/work/public/app/main/appraisal/appraisal.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11658,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1942,
+								1942
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 475.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/home/bititude/Documents/bititude/work/public/app/main/appraisal/form/form.html",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 32447,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								20788,
+								20788
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 6073.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 112.0
+	},
+	"pinned_build_system": "",
+	"project": "bititudework.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"react-hashychat/public/scripts/components/App.js"
+			],
+			[
+				"insta",
+				"node_modules/mongoose/node_modules/bson/node_modules/bson-ext/node_modules/node-pre-gyp/lib/install.js"
+			],
+			[
+				"tod",
+				"todo/Animals.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Documents/projects/foodx-web/foodX.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 268.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

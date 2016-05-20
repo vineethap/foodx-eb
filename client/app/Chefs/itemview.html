@@ -1,0 +1,78 @@
+<br/>
+<div class="page-content-wrapper">
+  <div class="content">
+    <div class="container" ng-init="vm.init()">
+      <div class="row">
+      	<div class="panel panel-default panel-height " ng-if="vm.user!=''">
+            <div class="row">
+  			      <div class=" col-md-2 text-center" ng-repeat="_image in vm.item.item_image">
+                <img ng-if="_image!==''" class="thumbnail-wrapper d100 circular inline pointer m-t-30 m-l-30 "  ng-src="{{_image}}" >
+                 
+              </div>
+              <div class="col-md-4 text-align ">
+                <label class="text-muted text-size">{{vm.item.itemname}}</label>
+                <br/>
+
+                <label class="text-muted text-size1">{{vm.item.itemtype}}</label>
+                <br/>
+                <label class="text-muted text-size1">{{vm.item.category}}</label>
+                <label class="text-muted text-size1">{{vm.item.subcategory}}</label>
+              </div>
+            </div>
+            <div class=" m-b-10 m-r-10">
+              <p class="pull-right profile ">{{vm.user.role}} #{{vm.user.userid}}</p>
+            </div>
+          </div>
+      </div>
+      <div class="row" >
+	      <div class="panel panel-default ">
+	      <br/>
+		      <button ng-show="!vm.item_comments" class="btn btn-warning btn-cons m-l-10" ng-click="review=true">write an item review</button>
+		       <br/>
+		       <br/>
+		      <div ng-show="review" class="m-l-10">
+			      <fieldset  class="rating " >
+					    <legend>Please rate:</legend>
+					    <input type="radio" id="star5" name="rating" ng-model="vm.item.rating" value="5" /><label for="star5" >5 stars</label>
+					    <input type="radio" id="star4" name="rating" ng-model="vm.item.rating" value="4" /><label for="star4" >4 stars</label>
+					    <input type="radio" id="star3" name="rating" ng-model="vm.item.rating" value="3" /><label for="star3" >3 stars</label>
+					    <input type="radio" id="star2" name="rating" ng-model="vm.item.rating" value="2" /><label for="star2" >2 stars</label>
+					    <input type="radio" id="star1" name="rating" ng-model="vm.item.rating" value="1" /><label for="star1" >1 star</label>
+						</fieldset>
+						<br/>
+						<a ng-click="show_inputs=true" >Write a review</a>
+						<br/>
+					<div class="row">
+						<div class="col-md-4">
+							<div class="form-group" ng-show="show_inputs ">
+								<input type="text" class="form-control" ng-model="vm.item.comment_title" placeholder="Title">
+								<br/>
+							  <textarea type="text" name="comment" class="form-control" ng-model="vm.item.comment"placeholder="your comment"
+	               ></textarea> 
+	               <br/>
+              	<button ng-disabled="!vm.item.comment_title || !vm.item.comment || !vm.item.rating" class="btn btn-primary pull-right" ng-click="vm.submitReview(vm.item);show_inputs=false;review=false">post</button>
+							</div>
+							<br/>
+						</div>
+					</div>
+				</div>
+				<div style="display:done;" >
+          <label ng-if="vm.item_reviews" class="text-muted text-size">Top Customer Reviews</label>
+          <label ng-if="!vm.item_reviews" class="text-muted text-size1">No reviews yet</label>
+          <ul class="list-group"  >
+            <li class="list-group-item" ng-repeat="review in vm.item_reviews" >
+              <div class="alert alert-success"> 
+              <!-- <span class="label label-info">Star Rating: {{review.rating}}</span> -->
+                 <star-rating rating="review.rating" ng-disabled></star-rating> <p style="margin-top:-22px;margin-left:133px">By {{review.username}}</p> <p style="margin-top:-20px;margin-left:193px">on {{review.time |date}}</p>
+              </div>
+              <span>{{review.comment_title}}</span>
+              <p>{{review.comment}}</p>
+             
+            </li>
+          </ul>
+        </div>
+  		</div>
+    </div>
+  </div>
+</div>
+</div>

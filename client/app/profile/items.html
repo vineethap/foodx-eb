@@ -1,0 +1,150 @@
+<div ng-init="vm.init()">
+  <div class="modal-header">
+    <h3  class="modal-title">Add New </h3>
+  </div>
+  <div class="modal-body">
+    <form  class="form" name="form"  novalidate>
+   
+      <div class=" form-group" ng-class="{ 'has-success':  form.itemname.$valid && vm.submitted,
+                                              'has-error':  form.itemname.$invalid && vm.submitted }">
+          <label>Itemname</label>
+          <input type="text" name="itemname" class="form-control" ng-model="vm.item.itemname"
+                   required/>
+          <p class="help-block" ng-show=" form.itemname.$error.required && vm.submitted">
+            A name is required
+          </p>
+        </div>
+      <div class="form-group" ng-class="{ 'has-success':  form.itemtype.$valid && vm.submitted,
+                                            'has-error':  form.itemtype.$invalid && vm.submitted }">
+        <label>itemtype</label>
+            <div class="radio radio-success">
+              <input type="radio" value="veg" name="itemtype" id="veg" ng-model="vm.item.itemtype" class="form-control"required />
+              <label for="veg">veg</label>
+              <input type="radio" checked="checked" value="Nonveg" name="itemtype" id="Nonveg" ng-model="vm.item.itemtype" class="form-control" required />
+              <label for="Nonveg">Nonveg</label>
+               <p class="help-block" ng-show=" form.itemtype.$error.required && vm.submitted">
+           Gender is required
+          </p>
+            </div>
+           
+        </div>
+         <div class="row">
+        <div  class="col-md-6 form-group" ng-class="{ 'has-success':  form.category.$valid && vm.submitted,
+                                              'has-error':  form.category.$invalid && vm.submitted }">
+          <label>category</label>
+          <select class="form-control" ng-model="vm.item.category" ng-change="vm.listSubCats(vm.item.category)" name="category" required>
+           <option value="" disabled>select</option>
+                <option ng-repeat="category in vm.categories track by $index"                 
+                >{{category.name}}</option>                                   
+          </select>
+          <p class="help-block" ng-show=" form.category.$error.required && vm.submitted">
+            What's your category?
+          </p>
+        </div>
+        <div  class="col-md-6 form-group" ng-class="{ 'has-success':  form.subcategory.$valid && vm.submitted,
+                                              'has-error':  form.subcategory.$invalid && vm.submitted }" >
+           <label>subcategory</label>
+          <select class="form-control " ng-model="vm.item.subcategory"  name="subcategory" required>
+            <option value="" disabled>select</option>
+            <option ng-repeat="subcategory in vm.subcategories" value="{{vm.item.subcategory}}">{{subcategory}}</option>        
+          </select>
+           <p class="help-block" ng-show=" form.subcategory.$error.required && vm.submitted">
+            What's your category?
+          </p>
+        </div>
+     </div>
+      <div class="form-group" ng-class="{ 'has-success':  form.description.$valid && vm.submitted,
+                                            'has-error':  form.description.$invalid && vm.submitted }">
+        <label>item description</label>
+
+        <textarea type="text" name="description" class="form-control" ng-model="vm.item.description"
+               required
+               mongoose-error></textarea> 
+        <p class="help-block" ng-show=" form.description.$error.description && vm.submitted">
+          Doesn't look like a valid description.
+        </p>
+        <p class="help-block" ng-show=" form.description.$error.required && vm.submitted">
+          What's your description?
+        </p>
+        <p class="help-block" ng-show=" form.description.$error.mongoose">
+          {{ vm.errors.description }}
+        </p>
+      </div>
+    
+    <div ng-if="!vm.action" class=" form-group " ng-class="{ 'has-success':  form.files.$valid && vm.submitted,
+                                            'has-error':  form.files.$invalid && vm.submitted }">
+      <label>Add item Photos</label>
+      <button ngf-select="" ng-model="vm.item.files" multiple 
+              accept="image/*" name="files"  required>Select Files</button>
+      <br>
+      <br>Files:
+      <ul>
+        <li ng-repeat="f in vm.item.files" style="font:smaller">
+            {{f.name}}
+        </li>
+      </ul>
+      <p class="help-block" ng-show=" form.files.$error.required && vm.submitted">
+          Please add your item Image
+      </p>
+    </div>
+    <div ng-if="vm.action" class=" form-group " ng-class="{ 'has-success':  form.files.$valid && vm.submitted,
+                                            'has-error':  form.files.$invalid && vm.submitted }">
+      <label> Photos</label>
+      <button ngf-select="" ng-model="vm.item.files" multiple ngf-max-files="2"
+              accept="image/*" name="files"  required>Select Files</button>
+      <br>
+      <br>Files:
+      <ul class="list-group">
+      <li  class="list-group-item"  ng-if="vm.item.files" ng-repeat="_image in vm.item.files">
+      {{_image.name}}
+      </li>
+        <li class="list-group-item" ng-if="file!==''"ng-repeat="file in vm.item.item_image track by $index" style="font:smaller">
+           <img  class="thumbnail-wrapper d32  inline"  ng-src="{{file}}"/>  image{{$index+1}}<i class="fa fa-times pull-right pointer" ng-click="vm.remove(file)" aria-hidden="true"></i>
+        </li>
+      </ul>
+      <p class="help-block" ng-show=" form.files.$error.required && vm.submitted">
+          Please add your item Image
+      </p>
+    </div>
+     <div class=" form-group" ng-class="{ 'has-success':  form.item_price.$valid && vm.submitted,
+                                              'has-error':  form.item_price.$invalid && vm.submitted }">
+        <label>Item_price</label>
+        <input type="number" name="item_price" class="form-control" ng-model="vm.item.item_price"
+                 required/>
+        <p class="help-block" ng-show=" form.item_price.$error.required && vm.submitted">
+          A price is required
+        </p>
+      </div>
+      <div class="row">
+        
+      
+      <div class="form-group">
+        <label uib-popover="this is how it become!" popover-trigger="mouseenter">homel charges  10%</label>
+       <!--  <p uib-popover="this is how it become!" popover-trigger="mouseenter">{{vm.item.item_price}}*10%</p> -->
+        
+      </div>
+
+      <!-- <div class="col-md-9 form-group" ng-class="{ 'has-success':  form.finalval.$valid && vm.submitted,'has-error':  form.finalval.$invalid && vm.submitted }">
+        <label>rupee</label>
+        <input type="number" ng-model="vm.item.disc" name="finalval" class="form-control" value="{{vm.item.item_price* 1/10}}"
+                 />
+      </div> -->
+      </div>
+      <div class="form-group" >
+        <label>You'll Get</label>
+       <span class="form-control">{{vm.item.item_price - vm.item.item_price* 1/10}}</span>
+      </div>
+      <div>
+        <button ng-if="vm.action" class="btn btn-complete btn-cons" ng-click="vm.editItemdetails(vm.item,vm.item.files)">
+          Update
+        </button>
+        <button ng-if="!vm.action" class="btn btn-complete btn-cons"  ng-click="vm.uploadFiles(vm.item.files,form)">
+          Create
+        </button>
+        <a class="btn btn-danger btn-cons" ng-click="$dismiss()">
+          Cancel
+        </a>
+      </div>
+    </form>
+  </div>
+</div>

@@ -2,11 +2,12 @@
 
 import crypto from 'crypto';
 import mongoose from 'mongoose';
-mongoose.Promise = require('bluebird');
+// mongoose.Promise = require('bluebird');
 import {Schema} from 'mongoose';
-
+import shortId from 'shortid';
 var UserSchema = new Schema({
   name: String,
+  lastname:String,
   email: {
     type: String,
     lowercase: true
@@ -15,10 +16,33 @@ var UserSchema = new Schema({
     type: String,
     default: 'user'
   },
+  userid: Number,
+  gender: String,
+  address: String,
   password: String,
   provider: String,
-  salt: String
+  salt: String,
+  active: { type: Boolean, default: true },
+  profile_img: String
 });
+
+var CounterSchema = new Schema({
+  _id: { type: String, default: 'userid' },
+  seq: { type: Number, default: 0 }
+})
+var Counter = mongoose.model('Counter', CounterSchema);
+
+// Function which returns sequential order value
+function getSequentialOrder (name, cb) {
+  Counter.findByIdAndUpdate({
+    _id: name
+  }, {
+    $inc: { seq: 1 }
+  }, function (err, counter) {
+    if (err) { return cb(err); }
+    return cb(null, counter.seq);
+  });
+}
 
 /**
  * Virtuals
@@ -110,8 +134,12 @@ UserSchema
         if (encryptErr) {
           return next(encryptErr);
         }
-        this.password = hashedPassword;
-        next();
+        getSequentialOrder('userid', (err, userid) => {
+          if (err) { return next(err); }
+          this.userid = userid;
+          this.password = hashedPassword;
+          next();
+        });
       });
     });
   });

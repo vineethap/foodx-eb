@@ -14,14 +14,33 @@
         <li ng-repeat="item in nav.menu" ui-sref-active="active">
             <a ui-sref="{{item.state}}">{{item.title}}</a>
         </li>
-        <li ng-show="nav.isAdmin()" ui-sref-active="active"><a ui-sref="admin">Admin</a></li>
+        <li ng-show="nav.isAdmin()"  class="dropdown" ui-sref-active="active">
+          <a id="drop2" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+           Users 
+           <span class="caret"></span> 
+          </a> 
+          <ul class="dropdown-menu" aria-labelledby="drop2"> 
+          <li><a href="#" ui-sref="admin" >Admin</a></li>
+           <li><a href="#" ui-sref="chefs">Chefs</a></li> 
+           <li><a href="#" ui-sref="employee" >Staffs</a>
+          
+           </li>
+           </ul>
+        </li>
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
         <li ng-hide="nav.isLoggedIn()" ui-sref-active="active"><a ui-sref="login">Login</a></li>
         <li ng-show="nav.isLoggedIn()"><p class="navbar-text">Hello {{ nav.getCurrentUser().name }}</p> </li>
-        <li ng-show="nav.isLoggedIn()" ui-sref-active="active"><a ui-sref="signup"><span class="fa fa-user-plus"></span></a></li>
-        <li ng-show="nav.isLoggedIn()" ui-sref-active="active"><a ui-sref="settings"><span class="glyphicon glyphicon-cog"></span></a></li>
+        
+        <li ng-show="nav.isLoggedIn()" class="dropdown" ui-sref-active="active"><a id="drop2" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+           <span class="glyphicon glyphicon-cog"></span> 
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="drop2"> 
+           <li><a href="#" ui-sref="profile({id:nav.getCurrentUser()._id})" >Profile</a></li>
+           <li><a href="#"  ui-sref="settings">Settings</a></li> 
+           </ul>
+          </li>
 
         <li ng-show="nav.isLoggedIn()" ng-click="logout()"><a ui-sref="logout">Logout</a></li>
       </ul>

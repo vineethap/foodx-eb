@@ -1,0 +1,116 @@
+<div>
+  <div class="modal-header">
+    <h3 ng-if ="vm.action" class="modal-title">Add New {{vm.role}}</h3>
+    <h3 ng-if="!vm.action">Edit details</h3>
+  </div>
+  <div class="modal-body">
+    <form  class="form" name="form" ng-submit="vm.register(form)" novalidate>
+    <div class="row">
+      <div class="col-md-6 form-group" ng-class="{ 'has-success':  form.name.$valid && vm.submitted,
+                                              'has-error':  form.name.$invalid && vm.submitted }">
+          <label>Name</label>
+          <input type="text" name="name" class="form-control" ng-model="vm.user.name"
+                   required/>
+          <p class="help-block" ng-show=" form.name.$error.required && vm.submitted">
+            A name is required
+          </p>
+        </div>
+        <div class="col-md-6 form-group" ng-class="{ 'has-success':  form.lastname.$valid && vm.submitted,'has-error':  form.lastname.$invalid && vm.submitted }">
+          <label>Last Name</label>
+          <input type="text" name="lastname" class="form-control" ng-model="vm.user.lastname"
+                   required/>
+          <p ng-if ="vm.action" class="help-block" ng-show=" form.lastname.$error.required && vm.submitted">
+            A last name is required
+          </p>
+        </div>
+      </div>
+      <div class="form-group" ng-class="{ 'has-success':  form.gender.$valid && vm.submitted,
+                                            'has-error':  form.gender.$invalid && vm.submitted }">
+        <label>gender</label>
+            <div class="radio radio-success">
+              <input type="radio" value="male" name="gender" id="male" ng-model="vm.user.gender" class="form-control"required />
+              <label for="male">Male</label>
+              <input type="radio" checked="checked" value="female" name="gender" id="female" ng-model="vm.user.gender" class="form-control" required />
+              <label for="female">Female</label>
+               <p class="help-block" ng-show=" form.gender.$error.required && vm.submitted">
+           Gender is required
+          </p>
+            </div>
+           
+        </div>
+      <div class="form-group" ng-class="{ 'has-success':  form.email.$valid && vm.submitted,
+                                            'has-error':  form.email.$invalid && vm.submitted }">
+        <label>Email</label>
+
+        <input type="email" name="email" class="form-control" ng-model="vm.user.email"
+               required
+               mongoose-error/>
+        <p class="help-block" ng-show=" form.email.$error.email && vm.submitted">
+          Doesn't look like a valid email.
+        </p>
+        <p class="help-block" ng-show=" form.email.$error.required && vm.submitted">
+          What's your email address?
+        </p>
+        <p class="help-block" ng-show=" form.email.$error.mongoose">
+          {{ vm.errors.email }}
+        </p>
+      </div>
+      <div class="form-group" ng-class="{ 'has-success':  form.address.$valid && vm.submitted,
+                                            'has-error':  form.address.$invalid && vm.submitted }">
+        <label>Address</label>
+
+        <textarea type="address" name="address" class="form-control" ng-model="vm.user.address"
+               required
+               mongoose-error></textarea> 
+        <p class="help-block" ng-show=" form.address.$error.address && vm.submitted">
+          Doesn't look like a valid address.
+        </p>
+        <p class="help-block" ng-show=" form.address.$error.required && vm.submitted">
+          What's your address?
+        </p>
+        <p class="help-block" ng-show=" form.address.$error.mongoose">
+          {{ vm.errors.address }}
+        </p>
+      </div>
+      <div ng-if="vm.action" class="form-group" ng-class="{ 'has-success':  form.password.$valid && vm.submitted,
+                                            'has-error':  form.password.$invalid && vm.submitted }">
+        <label>Password</label>
+        <input type="password" name="password" class="form-control" ng-model="vm.user.password"
+               ng-minlength="3"
+               required
+               mongoose-error/>
+        <p class="help-block"
+           ng-show="( form.password.$error.minlength ||  form.password.$error.required) && vm.submitted">
+          Password must be at least 3 characters.
+        </p>
+        <p class="help-block" ng-show=" form.password.$error.mongoose">
+          {{ vm.errors.password }}
+        </p>
+      </div>
+
+      <div ng-if="vm.action" class="form-group" ng-class="{ 'has-success':  form.confirmPassword.$valid && vm.submitted,
+                                            'has-error':  form.confirmPassword.$invalid && vm.submitted }">
+        <label>Confirm Password</label>
+        <input type="password" name="confirmPassword" class="form-control" ng-model="vm.user.confirmPassword"
+               match="vm.user.password"
+               ng-minlength="3" required/>
+        <p class="help-block"
+           ng-show="  form.confirmPassword.$error.match && vm.submitted">
+          Passwords must match.
+        </p>
+      </div>
+
+      <div>
+        <button ng-if="!vm.action" class="btn btn-complete btn-cons" onclick="">
+          Update
+        </button>
+        <button ng-if="vm.action" class="btn btn-complete btn-cons" type="submit">
+          Create
+        </button>
+        <a class="btn btn-danger btn-cons" ng-click="$dismiss()">
+          Cancel
+        </a>
+      </div>
+    </form>
+  </div>
+</div>

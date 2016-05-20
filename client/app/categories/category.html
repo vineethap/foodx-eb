@@ -1,0 +1,78 @@
+<script type="text/ng-template" id="addCategories.html">
+  <div class="modal-body">
+  <form  class="form" name="form" ng-submit="vm.addCategories(form)" novalidate>
+  <div  class="form-group" ng-class="{ 'has-success':  form.name.$valid && vm.submitted,
+                                            'has-error':  form.name.$invalid && vm.submitted }">
+        <label>name</label>
+        <input type="text" name="name" class="form-control" ng-model="vm.category.name"
+               
+               required/>
+        <p class="help-block"
+           ng-show="( form.name.$error.minlength ||  form.name.$error.required) && vm.submitted">
+          gj
+        </p>
+        <p class="help-block" ng-show=" form.name.$error.mongoose">
+          {{ vm.errors.item }}
+        </p>
+      </div>
+      
+      <div >
+    <button  class="btn btn-complete btn-cons" type="submit">
+      Create
+    </button>
+    <a class="btn btn-danger btn-cons" ng-click="$dismiss()">
+      Cancel
+    </a>
+  </div>
+  </form>
+  </div>
+  
+</script>
+
+<div ng-init="ct.init()" class="page-content-wrapper">
+  <div class="content">
+    <div class="container">
+    <br/>
+      <button type="button" class="btn btn-primary" ng-click="ct.openModal('md')" >+Category</button>
+      <br/>
+      <br/>
+      <table class="table table-striped">
+        <thead>
+          <tr role="row"  >
+            <th>#</th>
+            <th>category</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr role="row" ng-repeat="category in ct.categories track by $index" ng-class="category.active?'': 'disabled'">
+            <td  >{{$index + 1}}</td>
+            <td ng-if="!show">{{category.name}}</td>
+
+            <td ng-if="show "><input type="text" ng-model="category.name" /></td>
+            <td ng-if="!show"  ng-click="ct.deleteCategory('sm',category)">
+              <button class="btn btn-danger" ng-if="category.active">Disable</button>
+              <button class="btn btn-success" ng-if="!category.active">Enable</button>
+            </td>
+             <td ><a class="btn btn-primary" ui-sref="subcategory({id:category._id})" ng-show="!show"><i  class="fa fa-eye fa-1x pointer" aria-hidden="true" ></i></a></td>
+            <td ><a class="btn btn-warning" ng-click="show=true ; ct.show=true" ng-show="!show"><i class="fa fa-pencil-square-o fa-1x pointer" aria-hidden="true" ></i></a></td>
+            <td ><a ng-show="show" class="btn btn-success" ng-click="ct.editCategory(category,$index);show=false"><i  class="fa fa-check fa-1x pointer" aria-hidden="true" ></i></a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<script type="text/ng-template" id="deleteModal.html">
+  <div class="modal-body m-t-20">
+    <p>Are you sure you want to 
+      <strong ng-if="vm.item.active">Disable </strong>
+      <strong ng-if="!vm.item.active">Enable </strong>
+      this category?
+    </p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="vm.disableCategory()">OK</button>
+    <button class="btn btn-warning" type="button" ng-click="$dismiss()">Cancel</button>
+  </div>
+</script>

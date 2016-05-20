@@ -2,5 +2,6 @@
 
 angular.module('foodXApp.admin', [
   'foodXApp.auth',
-  'ui.router'
+  'ui.router',
+  'validation.match'
 ]);

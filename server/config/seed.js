@@ -51,7 +51,8 @@ User.find({}).remove()
       role: 'admin',
       name: 'Admin',
       email: 'admin@example.com',
-      password: 'admin'
+      password: 'admin',
+      active:true
     })
     .then(() => {
       console.log('finished populating users');

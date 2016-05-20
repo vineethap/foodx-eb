@@ -1,0 +1,180 @@
+<br>
+<script type="text/ng-template" id="ModalContent.html">
+  <div class="modal-body" style="height:100px">
+  <div class="row panel panel-default m-t-30" >
+    <form name="upload" class="form panel-body" data-ng-submit="vm.addFile()">
+    <div class="col-md-4  m-l-100">
+      <input type="file" name="file" onchange="angular.element(this).scope().vm.uploadedFile(this)" id="file-upload" />
+      </div>
+       <div class="col-md-2 ">
+     <button type="submit" class=" button-submit btn-primary m-l-20"> upload</button>
+     </div>
+     
+    </form>
+    </div>
+  </div>
+</script>
+
+<div class="page-content-wrapper">
+  <div class="content">
+    <div class="container" ng-init="vm.init()">
+      <div class="row">
+          <div class="panel panel-default panel-height " ng-if="vm.user!=''">
+            <div class="row">
+  			      <div class=" col-md-2 text-center">
+                <img class="thumbnail-wrapper d100 circular inline pointer m-t-30 m-l-30 "  ng-src="{{vm.user.profile_img? vm.user.profile_img:'client/assets/images/default_user.jpg'}}" ng-click="vm.openModal()" tooltip-placement="bottom" uib-tooltip="change profile picture">
+                 
+              </div>
+              <div class="col-md-4 text-align ">
+                <label class="text-muted text-size">{{vm.user.name}} {{vm.user.lastname}} </label>
+                <br/>
+                <label class="text-muted text-size1">{{vm.user.address}}</label>
+                <br/>
+                <br/>
+                <label class="text-muted text-size1">{{Mobile}}435435345</label>
+                 <br/>
+                <label class="text-muted text-size1">{{vm.user.email}}</label>
+              </div>
+              <div class="col-md-6 m-t-30">
+                <button class="btn btn-default pull-right" ng-click="vm.edit=true;vm.open('lg',false)"><i class="glyphicon glyphicon-pencil"></i> Edit</button>
+              </div>
+            </div>
+            <div class=" m-b-10 m-r-10">
+              <p class="pull-right profile ">{{vm.user.role}} #{{vm.user.userid}}</p>
+            </div>
+          </div>
+      </div>
+    <div class="row" ng-if="vm.user.role=='chef'">
+      <div class="panel panel-default panel-height">
+        <ul class="nav nav-tabs nav-tabs-linetriangle">
+          <li class="active">
+            <a data-toggle="tab" pg-tab="" href="#item" aria-expanded="true"><span>Foods</span></a>
+          </li>
+          <li class="">
+            <a data-toggle="tab" pg-tab="" href="#order" aria-expanded="false"><span>Order</span></a>
+          </li>
+          <li class="">
+            <a data-toggle="tab" pg-tab="" href="#available" aria-expanded="false"><span>Schedule</span></a>
+          </li>
+        </ul>      
+      <div class="tab-content">
+        <div class="tab-pane active" id="item">
+          <div class="row ">
+            <button  class="btn btn-warning btn-cons m-l-10" ng-click="vm.addItems()">+Item</button>
+            <table class="table table-striped">
+              <thead>
+                <tr role="row"  >
+                  <th>#</th>
+                  <th>itemname</th>
+                  <th>type</th>
+                  <th>category</th>
+                  <th>subcategory</th>
+                  <th>description</th>
+                  <th>image</th>
+                  <th></th>
+                   <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr role="row" ng-repeat="item in vm.items track by $index" ng-class="item.active?'': 'disabled'">
+                  <td>{{$index + 1}}</td>
+                  <td>{{item.itemname}}</td>
+                  <td>{{item.itemtype}}</td>
+                  <td>{{item.category}}</td>
+                  <td>{{item.subcategory}}</td>
+                  <td>{{item.description}}</td>
+                  <td > 
+                  <img ng-if="image!==''" ng-repeat="image in item.item_image track by $index" class="thumbnail-wrapper d48  inline m-l-10"  ng-src="{{image}}"/></td>
+                  <td ng-click="vm.deleteItem('sm',item)">
+                    <button class="btn btn-danger" ng-if="item.active">Disable</button>
+                    <button class="btn btn-success" ng-if="!item.active">Enable</button>
+                  </td>
+                  <td ><a ui-sref="singleitem({id:item._id})"><i class="fa fa-eye fa-2x pointer" aria-hidden="true" ></i></a></td>
+                  <td ><a ng-click="vm.editItem(item)"> <i class="fa fa-pencil fa-2x pointer" aria-hidden="true"  tooltip-placement="bottom" uib-tooltip="edit item"></i></a></td>
+                  <td ng-if="vm.current_user.role=='admin'"><a ng-click="vm.openFeaturedModal(item)" tooltip-placement="bottom" uib-tooltip="make it featured">
+                    <i class="fa fa-asterisk fa-2x pointer" aria-hidden="true"  ></i></a>
+                  </td>
+                </tr>
+              </tbody>
+            </table> 
+          </div>
+        </div>
+        <div class="tab-pane" id="order">
+          <div class="row">
+            <div class="col-md-12">
+               
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane" id="available">
+          <div class="row">
+            <div class="col-md-12">
+                
+            </div>
+          </div>
+        </div>
+      </div> 
+    </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<script type="text/ng-template" id="myModalContent.html">
+  <div class="modal-body m-t-20">
+    <p>Are you sure you want to 
+      <strong ng-if="vm.item.active">disable </strong>
+      <strong ng-if="!vm.item.active">enable </strong>
+      this item ?
+    </p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="vm.disableItem()">OK</button>
+    <button class="btn btn-warning" type="button" ng-click="$dismiss()">Cancel</button>
+  </div>
+</script>
+
+<script type="text/ng-template" id="featuredmodal.html">
+  <div class="modal-body m-t-20" >
+  <form  class="form" name="form"  novalidate>
+    <div class="form-group" ng-class="{ 'has-success':  form.featured.$valid && vm.submitted,
+                                              'has-error':  form.featured.$invalid && vm.submitted }" >
+      <label>Make Featured</label>
+      <div class="radio radio-success">
+        <input type="radio" value="yes" name="featured" id="yes" ng-model="vm.item.featured" class="form-control"required />
+        <label for="yes">yes</label>
+        <input type="radio" checked="checked" value="no" name="featured" id="no" ng-model="vm.item.featured" class="form-control" required />
+        <label for="no">no</label>
+      </div>
+      <p class="help-block" ng-show=" form.featured.$error.required && vm.submitted">
+            you must choose something
+      </p>
+    </div>
+    <div ng-if="vm.item.featured=='yes'" class="form-group" ng-class="{ 'has-success':  form.featured_dscrptn.$valid && vm.submitted,
+                                              'has-error':  form.featured_dscrptn.$invalid && vm.submitted }" >
+      <label>description</label>
+      <textarea  type="text" name="description" class="form-control" ng-model="vm.item.featured_dscrptn"
+             required
+             >
+      </textarea> 
+       <p class="help-block" ng-show=" form.featured_dscrptn.$error.required && vm.submitted">
+        write a description of the item
+      </p>
+    </div>
+    <div ng-if="vm.item.featured=='yes'" class="form-group"  ng-class="{ 'has-success':  form.file.$valid && vm.submitted,
+                                              'has-error':  form.file.$invalid && vm.submitted }"  >
+     <label>file</label>
+       
+      <input type="file" name="file" onchange="angular.element(this).scope().vm.uploadedFile(this)" id="file-upload" ng-model="vm.item.file" />
+      <p class="help-block" ng-show=" form.file.$error.required && vm.submitted">
+          Please add your item Image
+      </p>
+    </div>
+  <div class="m-r-120">
+    <button ng-disabled="!vm.files && !vm.item.featured_dscrptn" id="submit" class="btn btn-primary" type="button" ng-click="vm.makeFeatured(vm.item)">OK</button>
+    <button class="btn btn-warning" type="button" ng-click="$dismiss()">Cancel</button>
+  </div>
+  
+  </form>
+  </div>
+</script>

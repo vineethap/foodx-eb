@@ -1,0 +1,7 @@
+ <div>
+ <form name="upload" class="form" data-ng-submit="vm.addFile()">
+ <!-- <i class="fa fa-camera" aria-hidden="true"></i> -->
+  <input type="file" name="file" onchange="angular.element(this).scope().vm.uploadedFile(this)" />
+ <button type="submit">Upload </button>
+</form>
+   </div>

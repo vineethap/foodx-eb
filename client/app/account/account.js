@@ -4,7 +4,7 @@ angular.module('foodXApp')
   .config(function($stateProvider) {
     $stateProvider
       .state('login', {
-        url: '/login',
+        url: '/',
         templateUrl: 'app/account/login/login.html',
         controller: 'LoginController',
         controllerAs: 'vm'
@@ -18,27 +18,32 @@ angular.module('foodXApp')
                           $state.current.referrer ||
                           'main';
           Auth.logout();
-          $state.go(referrer);
+          $state.go('login');
         }
       })
-      .state('signup', {
-        url: '/add-admin',
-        templateUrl: 'app/account/signup/signup.html',
+      .state('register', {
+        url: '/add-new/:status',
+        templateUrl: 'app/account/register/register.html',
         controller: 'RegisterController',
-        controllerAs: 'vm'
+        controllerAs: 'vm',
+        authenticate: true
       })
       .state('settings', {
         url: '/settings',
+        parent: 'main',
         templateUrl: 'app/account/settings/settings.html',
         controller: 'SettingsController',
         controllerAs: 'vm',
         authenticate: true
       });
+
   })
-  .run(function($rootScope) {
+  .run(function($rootScope, $location, Auth) {
     $rootScope.$on('$stateChangeStart', function(event, next, nextParams, current) {
       if (next.name === 'logout' && current && current.name && !current.authenticate) {
         next.referrer = current.name;
       }
+   
     });
+    
   });
