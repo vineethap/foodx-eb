@@ -17,7 +17,7 @@
   <div class="content">
     <div class="container">
     <br/>
-      <button type="button" class="btn btn-primary" ng-click="emp.open('lg',true)" >+Staff</button>
+      <button type="button" class="btn btn-primary btn-sm" ng-click="emp.open('lg',true)" >+Staff</button>
       <br/>
       <br/>
       <table class="table table-striped">
@@ -36,10 +36,10 @@
             <td>{{user.lastname}}</td>
             <td>{{user.email}}</td>
             <td ng-click="emp.delete('sm',user)">
-              <button class="btn btn-danger" ng-if="user.active">Disable</button>
-              <button class="btn btn-success" ng-if="!user.active">Enable</button>
+              <button class="btn btn-danger btn-sm" ng-if="user.active">Disable</button>
+              <button class="btn btn-success btn-sm" ng-if="!user.active">Enable</button>
             </td>
-            <td><a class="btn btn-info" ui-sref="profile({id:user._id})"><i class="fa fa-eye fa-1x pointer" aria-hidden="true" ></i></a></td>
+            <td><a class="btn " ui-sref="profile({id:user._id})"><i class="fa fa-eye fa-1x pointer" aria-hidden="true" ></i></a></td>
           </tr>
         </tbody>
       </table>

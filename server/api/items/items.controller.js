@@ -21,7 +21,36 @@ function handleError(res, statusCode) {
     res.status(statusCode).send(err);
   };
 }
-
+var readAndWriteFile = (file, fields, counter,item_image) => {
+  return new Promise (function (resolve, reject) {
+    var ext = path.extname(file.path),
+    old_path = file.path,
+    index = old_path.lastIndexOf('/') + 1,
+    uid=shortid.generate(),
+    file_name = old_path.substr(index),
+    new_name = path.join(config.root, 'client/assets/images/uploads/'+ fields.name.toString() + '_' + fields.chef_id.toString() + '_' + uid + ext),
+    new_path = path.join(config.root, 'client/assets/images/uploads/', file_name );
+    let img_path= '/assets/images/uploads/'+ fields.name.toString() + '_' + fields.chef_id.toString() + '_' + uid + ext;
+   
+    fs.readFile(old_path, function(err, data) {
+      if (err){
+         return reject(err);
+      }
+      fs.writeFile(new_path, data, function(err) {
+        if (err) {
+          return reject(err);
+          
+        }
+          fs.rename(new_path, new_name, function (err) {
+            if (err) {
+              return reject(err);
+            }
+            return resolve(img_path);
+          });
+      });
+    });
+  })
+}
 export function create(req, res, next) {
   var form = new multiparty.Form();
   form.parse(req, function(err, fields, files) {
@@ -60,36 +89,7 @@ export function create(req, res, next) {
   });
 }
 
-var readAndWriteFile = (file, fields, counter,item_image) => {
-  return new Promise (function (resolve, reject) {
-    var ext = path.extname(file.path),
-    old_path = file.path,
-    index = old_path.lastIndexOf('/') + 1,
-    uid=shortid.generate(),
-    file_name = old_path.substr(index),
-    new_name = path.join(config.root, 'client/assets/images/uploads/'+ fields.name.toString() + '_' + fields.chef_id.toString() + '_' + uid + ext),
-    new_path = path.join(config.root, 'client/assets/images/uploads/', file_name );
-    let img_path= '/assets/images/uploads/'+ fields.name.toString() + '_' + fields.chef_id.toString() + '_' + uid + ext;
-   
-    fs.readFile(old_path, function(err, data) {
-      if (err){
-         return reject(err);
-      }
-      fs.writeFile(new_path, data, function(err) {
-        if (err) {
-          return reject(err);
-          
-        }
-          fs.rename(new_path, new_name, function (err) {
-            if (err) {
-              return reject(err);
-            }
-            return resolve(img_path);
-          });
-      });
-    });
-  })
-}
+
 
 export function find(req, res, next) {
   var chef_id = req.query.chef_id;

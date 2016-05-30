@@ -60,7 +60,7 @@
       <div class="tab-content">
         <div class="tab-pane active" id="item">
           <div class="row ">
-            <button  class="btn btn-warning btn-cons m-l-10" ng-click="vm.addItems()">+Item</button>
+            <button  class="btn btn-warning btn-cons m-l-10 btn-sm" ng-click="vm.addItems()">+Item</button>
             <table class="table table-striped">
               <thead>
                 <tr role="row"  >
@@ -86,13 +86,13 @@
                   <td > 
                   <img ng-if="image!==''" ng-repeat="image in item.item_image track by $index" class="thumbnail-wrapper d48  inline m-l-10"  ng-src="{{image}}"/></td>
                   <td ng-click="vm.deleteItem('sm',item)">
-                    <button class="btn btn-danger" ng-if="item.active">Disable</button>
-                    <button class="btn btn-success" ng-if="!item.active">Enable</button>
+                    <button class="btn btn-danger btn-sm" ng-if="item.active">Disable</button>
+                    <button class="btn btn-success btn-sm" ng-if="!item.active">Enable</button>
                   </td>
-                  <td ><a ui-sref="singleitem({id:item._id})"><i class="fa fa-eye fa-2x pointer" aria-hidden="true" ></i></a></td>
-                  <td ><a ng-click="vm.editItem(item)"> <i class="fa fa-pencil fa-2x pointer" aria-hidden="true"  tooltip-placement="bottom" uib-tooltip="edit item"></i></a></td>
+                  <td ><a ui-sref="singleitem({id:item._id})"><i class="fa fa-eye fa-1x pointer" aria-hidden="true" ></i></a></td>
+                  <td ><a ng-click="vm.editItem(item)"> <i class="fa fa-pencil fa-1x pointer" aria-hidden="true"  tooltip-placement="bottom" uib-tooltip="edit item"></i></a></td>
                   <td ng-if="vm.current_user.role=='admin'"><a ng-click="vm.openFeaturedModal(item)" tooltip-placement="bottom" uib-tooltip="make it featured">
-                    <i class="fa fa-asterisk fa-2x pointer" aria-hidden="true"  ></i></a>
+                    <i class="fa fa-asterisk fa-1x pointer" aria-hidden="true"  ></i></a>
                   </td>
                 </tr>
               </tbody>

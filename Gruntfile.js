@@ -249,7 +249,7 @@ module.exports = function (grunt) {
       dist: {
         src: [
           '<%= yeoman.dist %>/<%= yeoman.client %>/!(bower_components){,*/}*.{js,css}',
-          '<%= yeoman.dist %>/<%= yeoman.client %>/assets/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
+          // '<%= yeoman.dist %>/<%= yeoman.client %>/assets/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
         ]
       }
     },
@@ -292,7 +292,7 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: '<%= yeoman.client %>/assets/images',
-          src: '{,*/}*.{png,jpg,jpeg,gif,svg}',
+          src: '[*/*.{png,jpg,jpeg,gif,svg}]',
           dest: '<%= yeoman.dist %>/<%= yeoman.client %>/assets/images'
         }]
       }
@@ -334,10 +334,11 @@ module.exports = function (grunt) {
     ngtemplates: {
       options: {
         // This should be the name of your apps angular module
+           // prefix: '/',
         module: 'foodXApp',
         htmlmin: {
           collapseBooleanAttributes: true,
-          collapseWhitespace: true,
+          collapseWhitespace: false,
           removeAttributeQuotes: true,
           removeEmptyAttributes: true,
           removeRedundantAttributes: true,
@@ -379,6 +380,10 @@ module.exports = function (grunt) {
             'bower_components/**/*',
             'assets/images/{,*/}*.{webp}',
             'assets/fonts/**/*',
+            'components/**/*',
+            'pages/**/*',
+            'assets/**/*',
+
             'index.html'
           ]
         }, {

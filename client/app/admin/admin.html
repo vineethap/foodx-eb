@@ -19,7 +19,7 @@
 <div class="container" ng-init="loadAll()">
 <br/>
 
-  <button type="button" class="btn btn-primary" ng-click="admin.open('lg',true)" >+Admin</button>
+  <button type="button" class="btn btn-primary btn-sm" ng-click="admin.open('lg',true)" >+Admin</button>
   <br/>
   <br/>
 
@@ -40,10 +40,10 @@
         <td>{{user.lastname}}</td>
         <td>{{user.email}}</td>
         <td ng-click="admin.delete('sm',user)">
-          <button class="btn btn-danger" ng-if="user.active">Disable</button>
-          <button class="btn btn-success" ng-if="!user.active">Enable</button>
+          <button class="btn btn-danger btn-sm" ng-if="user.active">Disable</button>
+          <button class="btn btn-success btn-sm" ng-if="!user.active">Enable</button>
         </td>
-        <td><a class="btn btn-info" ui-sref="profile({id:user._id})"><i class="fa fa-eye fa-1x pointer" aria-hidden="true" ></i></a></td>
+        <td><a class="btn " ui-sref="profile({id:user._id})"><i class="fa fa-eye fa-1x pointer" aria-hidden="true" ></i></a></td>
       </tr>
     </tbody>
   </table>
