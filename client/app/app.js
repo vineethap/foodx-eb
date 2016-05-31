@@ -8,7 +8,6 @@ angular.module('foodXApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
-  'btford.socket-io',
   'ui.router',
   'ui.bootstrap',
   'validation.match'
@@ -20,3 +19,8 @@ angular.module('foodXApp', [
 
     $locationProvider.html5Mode(true);
   });
+
+
+/*
+  'btford.socket-io',
+*/

@@ -52,6 +52,7 @@ class ItemModalCtrl {
   };
 
   uploadFiles(files,form) {
+    console.log(this.item)
     this.files = files;
     this.submitted = true;
     if (files && files.length&&form.$valid) {

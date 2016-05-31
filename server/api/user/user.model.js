@@ -40,6 +40,7 @@ function getSequentialOrder (name, cb) {
     $inc: { seq: 1 }
   }, function (err, counter) {
     if (err) { return cb(err); }
+    console.log(name);
     return cb(null, counter.seq);
   });
 }

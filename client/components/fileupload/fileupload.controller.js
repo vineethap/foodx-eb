@@ -30,7 +30,6 @@ uploadedFile(element){
  this.$scope.$apply(function($scope) {
    $scope.files = element.files;         
  });
-    console.log("fgkj",element.files)
 }
     
 }

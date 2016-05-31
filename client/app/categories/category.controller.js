@@ -4,7 +4,7 @@
 
 class CategoryController {
 
-  constructor($http, $scope, socket, Auth,Modal,$uibModal,Category,$stateParams) {
+  constructor($http, $scope, Auth,Modal,$uibModal,Category,$stateParams) {
     this.$http = $http;
     this.isLoggedIn = Auth.isLoggedIn();
     this.$uibModal=$uibModal;

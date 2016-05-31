@@ -94,7 +94,7 @@ class ModalInstanceCtrl {
   }
   
    addFile() {
-   this.fileUpload.uploadfile(this.$scope.files,this.user._id)
+   this.fileUpload.uploadfile(this.$scope.files,this.user.name)
     .then((res) => {
          this.$uibModalInstance.close(res);
     }).catch(err=>{
@@ -110,7 +110,6 @@ uploadedFile(element){
  });
 }
 addCategories(form){
-  console.log(this.category,"ij")
  this.submitted = true;
     if (form.$valid ) {
       this.Category.save({
