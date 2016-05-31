@@ -1,49 +1,24 @@
-<div class="navbar navbar-default navbar-static-top" ng-controller="NavbarController">
-  <div class="container">
-    <div class="navbar-header">
-      <button class="navbar-toggle" type="button" ng-click="nav.isCollapsed = !nav.isCollapsed">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a href="/" class="navbar-brand">food-x</a>
-    </div>
-    <div uib-collapse="nav.isCollapsed" class="navbar-collapse collapse" id="navbar-main">
-      <ul class="nav navbar-nav">
-        <li ng-repeat="item in nav.menu" ui-sref-active="active">
-            <a ui-sref="{{item.state}}">{{item.title}}</a>
-        </li>
-        <li ng-show="nav.isAdmin()"  class="dropdown" ui-sref-active="active">
-          <a id="drop2" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-           Users 
-           <span class="caret"></span> 
-          </a> 
-          <ul class="dropdown-menu" aria-labelledby="drop2"> 
-          <li><a href="#" ui-sref="admin" >Admin</a></li>
-           <li><a href="#" ui-sref="chefs">Chefs</a></li> 
-           <li><a href="#" ui-sref="employee" >Staffs</a>
-          
-           </li>
-           </ul>
-        </li>
-      </ul>
-
-      <ul class="nav navbar-nav navbar-right">
-        <li ng-hide="nav.isLoggedIn()" ui-sref-active="active"><a ui-sref="login">Login</a></li>
-        <li ng-show="nav.isLoggedIn()"><p class="navbar-text">Hello {{ nav.getCurrentUser().name }}</p> </li>
-        
-        <li ng-show="nav.isLoggedIn()" class="dropdown" ui-sref-active="active"><a id="drop2" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-           <span class="glyphicon glyphicon-cog"></span> 
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="drop2"> 
-           <li><a href="#" ui-sref="profile({id:nav.getCurrentUser()._id})" >Profile</a></li>
-           <li><a href="#"  ui-sref="settings">Settings</a></li> 
-           </ul>
-          </li>
-
-        <li ng-show="nav.isLoggedIn()" ng-click="logout()"><a ui-sref="logout">Logout</a></li>
-      </ul>
-    </div>
+<div ng-show="nav.isLoggedIn" class="navbar navbar-default navbar-static-top" ng-controller="NavbarController">
+  
+    <!-- <div class="navbar-header"> -->
+      <div class=" pull-right">
+      <!-- START User Info-->
+       
+        <div class="btn-group" uib-dropdown is-open="status.isopen">
+         
+          <div class="thumbnail-wrapper d32 circular inline m-t-5" uib-dropdown-toggle ng-disabled="disabled">
+            <img ng-src="{{nav.getCurrentUser().profile_img? nav.getCurrentUser().profile_img:'/assets/images/default_user.jpg'}}" alt="" width="32" height="32" >
+          </div>
+          <ul class="dropdown-menu dd-open" uib-dropdown-menu role="menu" aria-labelledby="single-button">
+            <li role="menuitem">
+              <a ui-sref="profile({id:nav.getCurrentUser()._id})">Profile</a>
+            </li>
+            <li role="menuitem">
+              <a ui-sref="logout">Logout</a>
+            </li>
+          </ul>
+        </div>
+      <!-- END User Info-->
+   
   </div>
 </div>
