@@ -289,14 +289,37 @@ module.exports = function (grunt) {
     // The following *-min tasks produce minified files in the dist folder
     imagemin: {
       dist: {
+
+      options: {
+        optimizationLevel: 5,
+        progressive: true,
+      },
         files: [{
           expand: true,
-          cwd: '<%= yeoman.client %>/assets/images',
+          cwd: '<%= yeoman.client %>/assets/images/uploads',
           src: '[**/*.{png,jpg,jpeg,gif,svg}]',
-          dest: '<%= yeoman.dist %>/<%= yeoman.client %>/assets/images'
+          dest: '<%= yeoman.dist %>/<%= yeoman.client %>/assets/images/uploads',   
+          ext: '.min.js',  
+          extDot: 'first'
         }]
       }
     },
+    // var imagemin;
+    //     config.imagemin = imagemin = {};
+    //         imagemin.dist :{
+    //              options: {
+    //                     optimizationLevel: 5,
+    //                     progressive: true,
+    //                   },
+
+    //                 files: [{
+    //                     expand: true,
+    //                     cwd: 'assets/images',  // that folder should exist with all images
+    //                     src: ['**/*.{png,jpg,gif}'],
+    //                     dest: 'public/images'   // where is going your min files
+    //                 }]
+
+    //         }, 
 
     // Allow the use of non-minsafe AngularJS files. Automatically makes it
     // minsafe compatible so Uglify does not destroy the ng references

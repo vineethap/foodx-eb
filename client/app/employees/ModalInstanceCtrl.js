@@ -94,7 +94,7 @@ class ModalInstanceCtrl {
   }
   
    addFile() {
-   this.fileUpload.uploadfile(this.$scope.files,this.user.name)
+   this.fileUpload.uploadfile(this.$scope.files,this.user._id)
     .then((res) => {
          this.$uibModalInstance.close(res);
     }).catch(err=>{
