@@ -292,15 +292,13 @@ module.exports = function (grunt) {
 
       options: {
         optimizationLevel: 5,
-        progressive: true,
+        cache:false
       },
         files: [{
           expand: true,
           cwd: '<%= yeoman.client %>/assets/images/uploads',
-          src: '[**/*.{png,jpg,jpeg,gif,svg}]',
-          dest: '<%= yeoman.dist %>/<%= yeoman.client %>/assets/images/uploads',   
-          ext: '.min.js',  
-          extDot: 'first'
+          src: '[**/*.{png,jpg,jpeg,gif,svg}]' ,
+          dest: '<%= yeoman.dist %>/<%= yeoman.client %>/assets/images/uploads'
         }]
       }
     },
