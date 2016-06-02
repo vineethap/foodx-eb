@@ -61,7 +61,9 @@
         <div class="tab-pane active" id="item">
           <div class="row ">
             <button  class="btn btn-warning btn-cons m-l-10 btn-sm" ng-click="vm.addItems()">+Item</button>
-            <table class="table table-striped">
+             <div class="table-responsive">
+             <div id="basicTable_wrapper" class="dataTables_wrapper form-inline no-footer">
+                <table class="table table-hover dataTable no-footer" datatable="ng" id="basicTable" role="grid" dt-options="dtOptionsRequestManager">
               <thead>
                 <tr role="row"  >
                   <th>#</th>
@@ -97,6 +99,8 @@
                 </tr>
               </tbody>
             </table> 
+            </div>
+            </div>
           </div>
         </div>
         <div class="tab-pane" id="order">
