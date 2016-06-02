@@ -16,36 +16,58 @@
 <div class="page-content-wrapper">
   <div class="content">
     <div class="container-fluid container-fixed-lg">
-    <br/>
-      <button type="button" class="btn btn-primary btn-sm" ng-click="emp.open('lg',true)" >+Staff</button>
-      <br/>
-      <br/>
-      <div class="table-responsive">
- <div id="basicTable_wrapper" class="dataTables_wrapper form-inline no-footer">
-    <table class="table table-hover dataTable no-footer" datatable="ng" id="basicTable" role="grid" dt-options="dtOptionsRequestManager">
-        <thead>
-          <tr role="row"  >
-            <th>#</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Mail id</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr role="row" ng-repeat="user in emp.users track by $index" ng-class="user.active?'': 'disabled'">
-            <td>{{$index + 1}}</td>
-            <td>{{user.name}}</td>
-            <td>{{user.lastname}}</td>
-            <td>{{user.email}}</td>
-            <td ng-click="emp.delete('sm',user)">
-              <button class="btn btn-danger btn-sm" ng-if="user.active">Disable</button>
-              <button class="btn btn-success btn-sm" ng-if="!user.active">Enable</button>
-            </td>
-            <td><a class="btn " ui-sref="profile({id:user._id})"><i class="fa fa-eye fa-1x pointer" aria-hidden="true" ></i></a></td>
-          </tr>
-        </tbody>
-      </table>
+      <ul class="breadcrumb">
+        <li>
+          <a  class="active" ui-sref="main">Home</a>
+        </li>
+        <li>
+          <a href="#" class="active">Staffs</a>
+        </li>
+      </ul>
+      <div class="panel panel-transparent">
+        <div class="panel-heading">
+          <div class="panel-title">Add Staffs</div>
+        </div>
       </div>
+      <div class="container-fluid container-fixed-lg bg-white">
+        <div class="panel panel-transparent">
+          <div class="panel-heading">
+            <div class="panel-title">
+              <button type="button" class="btn btn-primary btn-sm" ng-click="emp.open('lg',true)" >+Staff</button>
+            </div>
+          </div>
+          <div class="panel-body">
+            <div class="table-responsive">
+              <div id="basicTable_wrapper" class="dataTables_wrapper form-inline no-footer">
+                <table class="table table-hover dataTable no-footer" datatable="ng" id="basicTable" role="grid" dt-options="dtOptionsRequestManager">
+                  <thead>
+                    <tr role="row"  >
+                      <th>#</th>
+                      <th>First Name</th>
+                      <th>Last Name</th>
+                      <th>Mail id</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr role="row" ng-repeat="user in emp.users track by $index" ng-class="user.active?'': 'disabled'">
+                      <td>{{$index + 1}}</td>
+                      <td>{{user.name}}</td>
+                      <td>{{user.lastname}}</td>
+                      <td>{{user.email}}</td>
+                      <td ng-click="emp.delete('sm',user)">
+                        <button class="btn btn-danger btn-sm" ng-if="user.active">Disable</button>
+                        <button class="btn btn-success btn-sm" ng-if="!user.active">Enable</button>
+                      </td>
+                      <td>
+                        <a class="btn " ui-sref="profile({id:user._id})"><i class="fa fa-eye fa-1x pointer" aria-hidden="true" ></i></a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

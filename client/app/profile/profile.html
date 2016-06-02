@@ -1,23 +1,39 @@
 <br>
 <script type="text/ng-template" id="ModalContent.html">
   <div class="modal-body" style="height:100px">
-  <div class="row panel panel-default m-t-30" >
-    <form name="upload" class="form panel-body" data-ng-submit="vm.addFile()">
-    <div class="col-md-4  m-l-100">
-      <input type="file" name="file" onchange="angular.element(this).scope().vm.uploadedFile(this)" id="file-upload" />
-      </div>
-       <div class="col-md-2 ">
-     <button type="submit" class=" button-submit btn-primary m-l-20"> upload</button>
-     </div>
-     
-    </form>
+    <div class="row panel panel-default m-t-30" >
+      <form name="upload" class="form panel-body" data-ng-submit="vm.addFile()">
+        <div class="col-md-4  m-l-100">
+          <input type="file" name="file" onchange="angular.element(this).scope().vm.uploadedFile(this)" id="file-upload" />
+        </div>
+        <div class="col-md-2 ">
+          <button type="submit" class=" button-submit btn-primary m-l-20"> upload</button>
+        </div>
+      </form>
     </div>
   </div>
 </script>
 
+
 <div class="page-content-wrapper">
   <div class="content">
-    <div class="container" ng-init="vm.init()">
+    <div class="container-fluid container-fixed-lg" ng-init="vm.init()">
+       <ul class="breadcrumb">
+        <li>
+          <a  class="active" ui-sref="main">Home</a>
+        </li>
+        <li>
+          <a ui-sref="{{vm.user.role}}s" class="active">{{vm.user.role}}</a>
+        </li>
+        <li>
+          <a href="#" class="active">profile</a>
+        </li>
+      </ul>
+      <div class="panel panel-transparent">
+        <div class="panel-heading">
+          <div class="panel-title">userprofile</div>
+        </div>
+      </div>
       <div class="row">
           <div class="panel panel-default panel-height " ng-if="vm.user!=''">
             <div class="row">
@@ -124,6 +140,7 @@
 </div>
 </div>
 
+
 <script type="text/ng-template" id="myModalContent.html">
   <div class="modal-body m-t-20">
     <p>Are you sure you want to 
@@ -138,47 +155,47 @@
   </div>
 </script>
 
+
 <script type="text/ng-template" id="featuredmodal.html">
   <div class="modal-body m-t-20" >
-  <form  class="form" name="form"  novalidate>
-    <div class="form-group" ng-class="{ 'has-success':  form.featured.$valid && vm.submitted,
-                                              'has-error':  form.featured.$invalid && vm.submitted }" >
-      <label>Make Featured</label>
-      <div class="radio radio-success">
-        <input type="radio" value="yes" name="featured" id="yes" ng-model="vm.item.featured" class="form-control"required />
-        <label for="yes">yes</label>
-        <input type="radio" checked="checked" value="no" name="featured" id="no" ng-model="vm.item.featured" class="form-control" required />
-        <label for="no">no</label>
+    <form  class="form" name="form"  novalidate>
+      <div class="form-group" ng-class="{ 'has-success':  form.featured.$valid && vm.submitted,
+      'has-error':  form.featured.$invalid && vm.submitted }" >
+        <label>Make Featured</label>
+        <div class="radio radio-success">
+          <input type="radio" value="yes" name="featured" id="yes" ng-model="vm.item.featured" class="form-control"required />
+          <label for="yes">yes</label>
+          <input type="radio" checked="checked" value="no" name="featured" id="no" ng-model="vm.item.featured" class="form-control" required />
+          <label for="no">no</label>
+        </div>
+        <p class="help-block" ng-show=" form.featured.$error.required && vm.submitted">
+        you must choose something
+        </p>
       </div>
-      <p class="help-block" ng-show=" form.featured.$error.required && vm.submitted">
-            you must choose something
-      </p>
-    </div>
-    <div ng-if="vm.item.featured=='yes'" class="form-group" ng-class="{ 'has-success':  form.featured_dscrptn.$valid && vm.submitted,
-                                              'has-error':  form.featured_dscrptn.$invalid && vm.submitted }" >
-      <label>description</label>
-      <textarea  type="text" name="description" class="form-control" ng-model="vm.item.featured_dscrptn"
-             required
-             >
-      </textarea> 
-       <p class="help-block" ng-show=" form.featured_dscrptn.$error.required && vm.submitted">
+      <div ng-if="vm.item.featured=='yes'" class="form-group" ng-class="{ 'has-success':  form.featured_dscrptn.$valid && vm.submitted,
+      'has-error':  form.featured_dscrptn.$invalid && vm.submitted }" >
+        <label>description</label>
+        <textarea  type="text" name="description" class="form-control" ng-model="vm.item.featured_dscrptn"
+        required
+        >
+        </textarea> 
+        <p class="help-block" ng-show=" form.featured_dscrptn.$error.required && vm.submitted">
         write a description of the item
-      </p>
-    </div>
-    <div ng-if="vm.item.featured=='yes'" class="form-group"  ng-class="{ 'has-success':  form.file.$valid && vm.submitted,
-                                              'has-error':  form.file.$invalid && vm.submitted }"  >
-     <label>file</label>
-       
-      <input type="file" name="file" onchange="angular.element(this).scope().vm.uploadedFile(this)" id="file-upload" ng-model="vm.item.file" />
-      <p class="help-block" ng-show=" form.file.$error.required && vm.submitted">
-          Please add your item Image
-      </p>
-    </div>
-  <div class="m-r-120">
-    <button ng-disabled="!vm.files && !vm.item.featured_dscrptn" id="submit" class="btn btn-primary" type="button" ng-click="vm.makeFeatured(vm.item)">OK</button>
-    <button class="btn btn-warning" type="button" ng-click="$dismiss()">Cancel</button>
-  </div>
-  
-  </form>
+        </p>
+      </div>
+      <div ng-if="vm.item.featured=='yes'" class="form-group"  ng-class="{ 'has-success':  form.file.$valid && vm.submitted,
+      'has-error':  form.file.$invalid && vm.submitted }"  >
+        <label>file</label>
+
+        <input type="file" name="file" onchange="angular.element(this).scope().vm.uploadedFile(this)" id="file-upload" ng-model="vm.item.file" />
+        <p class="help-block" ng-show=" form.file.$error.required && vm.submitted">
+        Please add your item Image
+        </p>
+      </div>
+      <div class="m-r-120">
+        <button ng-disabled="!vm.files && !vm.item.featured_dscrptn" id="submit" class="btn btn-primary" type="button" ng-click="vm.makeFeatured(vm.item)">OK</button>
+        <button class="btn btn-warning" type="button" ng-click="$dismiss()">Cancel</button>
+      </div>
+    </form>
   </div>
 </script>

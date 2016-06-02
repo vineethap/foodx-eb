@@ -1,68 +1,86 @@
 <script type="text/ng-template" id="addCategories.html">
   <div class="modal-body">
-  <form  class="form" name="form" ng-submit="vm.addCategories(form)" novalidate>
-  <div  class="form-group" ng-class="{ 'has-success':  form.name.$valid && vm.submitted,
-                                            'has-error':  form.name.$invalid && vm.submitted }">
+    <form  class="form" name="form" ng-submit="vm.addCategories(form)" novalidate>
+      <div  class="form-group" ng-class="{ 'has-success':  form.name.$valid && vm.submitted,
+                'has-error':  form.name.$invalid && vm.submitted }">
         <label>name</label>
         <input type="text" name="name" class="form-control" ng-model="vm.category.name"
-               
-               required/>
+
+        required/>
         <p class="help-block"
-           ng-show="( form.name.$error.minlength ||  form.name.$error.required) && vm.submitted">
-          gj
+        ng-show="( form.name.$error.minlength ||  form.name.$error.required) && vm.submitted">
+        gj
         </p>
         <p class="help-block" ng-show=" form.name.$error.mongoose">
-          {{ vm.errors.item }}
+        {{ vm.errors.item }}
         </p>
       </div>
-      
       <div >
-    <button  class="btn btn-complete btn-cons" type="submit">
-      Create
-    </button>
-    <a class="btn btn-danger btn-cons" ng-click="$dismiss()">
-      Cancel
-    </a>
+        <button  class="btn btn-complete btn-cons" type="submit">
+        Create
+        </button>
+        <a class="btn btn-danger btn-cons" ng-click="$dismiss()">
+        Cancel
+        </a>
+      </div>
+    </form>
   </div>
-  </form>
-  </div>
-  
 </script>
 
 <div ng-init="ct.init()" class="page-content-wrapper">
   <div class="content">
-    <div class="container">
-    <br/>
-      <button type="button" class="btn btn-primary btn-sm " ng-click="ct.openModal('md')" >+Category</button>
-      <br/>
-      <br/> 
-      <div class="table-responsive">
-        <div id="basicTable_wrapper" class="dataTables_wrapper form-inline no-footer">
-        <table class="table table-hover dataTable no-footer" datatable="ng" id="basicTable" role="grid" dt-options="dtOptionsRequestManager">
-        <thead>
-          <tr role="row"  >
-            <th>#</th>
-            <th>category</th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr role="row" ng-repeat="category in ct.categories track by $index" ng-class="category.active?'': 'disabled'">
-            <td  >{{$index + 1}}</td>
-            <td ng-if="!show">{{category.name}}</td>
-
-            <td ng-if="show "><input type="text" ng-model="category.name" /></td>
-            <td ng-if="!show"  ng-click="ct.deleteCategory('sm',category)">
-              <button class="btn btn-danger btn-sm" ng-if="category.active">Disable</button>
-              <button class="btn btn-success btn-sm" ng-if="!category.active">Enable</button>
-            </td>
-             <td ><a class="btn" ui-sref="subcategory({id:category._id})" ng-show="!show"><i  class="fa fa-eye fa-1x pointer" aria-hidden="true" ></i></a></td>
-            <td ><a class="btn btn-warning btn-sm" ng-click="show=true ; ct.show=true" ng-show="!show"><i class="fa fa-pencil-square-o fa-1x pointer" aria-hidden="true" ></i></a></td>
-            <td ><a ng-show="show" class="btn btn-success btn-sm" ng-click="ct.editCategory(category,$index);show=false"><i  class="fa fa-check fa-1x pointer" aria-hidden="true" ></i></a></td>
-          </tr>
-        </tbody>
-      </table>
+    <div class="container-fluid container-fixed-lg">
+      <ul class="breadcrumb">
+        <li>
+          <a  class="active" ui-sref="main">Home</a>
+        </li>
+        <li>
+          <a href="#" class="active">category</a>
+        </li>
+      </ul>
+      <div class="panel panel-transparent">
+        <div class="panel-heading">
+          <div class="panel-title">Add category</div>
+        </div>
       </div>
+      <div class="container-fluid container-fixed-lg bg-white">
+        <div class="panel panel-transparent">
+          <div class="panel-heading">
+            <div class="panel-title">
+               <button type="button" class="btn btn-primary btn-sm " ng-click="ct.openModal('md')" >+Category</button>
+            </div>
+          </div>
+          <div class="panel-body">
+            <div class="table-responsive">
+              <div id="basicTable_wrapper" class="dataTables_wrapper form-inline no-footer">
+                <table class="table table-hover dataTable no-footer" datatable="ng" id="basicTable" role="grid" dt-options="dtOptionsRequestManager">
+                  <thead>
+                    <tr role="row"  >
+                      <th>#</th>
+                      <th>category</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr role="row" ng-repeat="category in ct.categories track by $index" ng-class="category.active?'': 'disabled'">
+                      <td  >{{$index + 1}}</td>
+                      <td ng-if="!show">{{category.name}}</td>
+
+                      <td ng-if="show "><input type="text" ng-model="category.name" /></td>
+                      <td ng-if="!show"  ng-click="ct.deleteCategory('sm',category)">
+                      <button class="btn btn-danger btn-sm" ng-if="category.active">Disable</button>
+                      <button class="btn btn-success btn-sm" ng-if="!category.active">Enable</button>
+                      </td>
+                      <td ><a class="btn" ui-sref="subcategory({id:category._id})" ng-show="!show"><i  class="fa fa-eye fa-1x pointer" aria-hidden="true" ></i></a></td>
+                      <td ><a class="btn btn-warning btn-sm" ng-click="show=true ; ct.show=true" ng-show="!show"><i class="fa fa-pencil-square-o fa-1x pointer" aria-hidden="true" ></i></a></td>
+                      <td ><a ng-show="show" class="btn btn-success btn-sm" ng-click="ct.editCategory(category,$index);show=false"><i  class="fa fa-check fa-1x pointer" aria-hidden="true" ></i></a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
