@@ -12,6 +12,8 @@ export default function(app) {
   app.use('/api/users', require('./api/user'));
   app.use('/api/files', require('./api/files'));
   app.use('/api/categories', require('./api/categories'));
+  app.use('/api/orders', require('./api/orders'));
+  app.use('/api/address', require('./api/address'));
   app.use('/api/items', require('./api/items'));
   app.use('/api/customer', require('./api/customers'));
   app.use('/api/item_review', require('./api/item_review'));

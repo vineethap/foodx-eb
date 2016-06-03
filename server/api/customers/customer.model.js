@@ -16,6 +16,6 @@ var CustomerSchema = new Schema({
   otp:{type:Number,index: { expires: 120 } }
 });
 export default mongoose.model('Customer', CustomerSchema);
-mongoose.model('Customer').ensureIndexes(function(err) {
-    console.log('ensure index', err)
-})
+// mongoose.model('Customer').ensureIndexes(function(err) {
+//     console.log('ensure index', err)
+// })

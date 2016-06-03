@@ -3,8 +3,8 @@
 angular.module('foodXApp')
   .config(function($stateProvider) {
     $stateProvider
-      .state('chefs', {
-        url: '/chefs',
+      .state('chef', {
+        url: '/chef',
         parent: 'main',
         templateUrl: 'app/Chefs/chefs.html',
         controller: 'ChefController',

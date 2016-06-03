@@ -4,7 +4,7 @@ angular.module('foodXApp.admin')
   .config(function($stateProvider) {
     $stateProvider
       .state('profile', {
-        url: '/profile/:id',
+        url: '/:user/:id',
         parent: 'main',
         templateUrl: 'app/profile/profile.html',
         controller: 'ProfileController',

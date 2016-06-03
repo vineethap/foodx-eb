@@ -59,7 +59,7 @@
                         <button class="btn btn-success btn-sm" ng-if="!user.active">Enable</button>
                       </td>
                       <td>
-                        <a class="btn " ui-sref="profile({id:user._id})"><i class="fa fa-eye fa-1x pointer" aria-hidden="true" ></i></a>
+                        <a class="btn " ui-sref="profile({user:user.role,id:user._id})"><i class="fa fa-eye fa-1x pointer" aria-hidden="true" ></i></a>
                       </td>
                     </tr>
                   </tbody>
