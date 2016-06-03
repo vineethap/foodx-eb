@@ -12,7 +12,7 @@ angular.module('foodXApp')
         authenticate: true
       })
       .state('subcategory', {
-        url     : '/category/:id',
+        url     : '/category/subcategory/:id',
         templateUrl: 'app/categories/subcategory.html',
          controller: 'CategoryController',
         controllerAs: 'ct', 

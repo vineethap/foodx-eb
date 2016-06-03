@@ -71,7 +71,7 @@
                       <button class="btn btn-danger btn-sm" ng-if="category.active">Disable</button>
                       <button class="btn btn-success btn-sm" ng-if="!category.active">Enable</button>
                       </td>
-                      <td ><a class="btn" ui-sref="subcategory({id:category._id})" ng-show="!show"><i  class="fa fa-eye fa-1x pointer" aria-hidden="true" ></i></a></td>
+                      <td ><a class="btn btn-sm " ui-sref="subcategory({id:category._id})" ng-show="!show"><i  class="fa fa-eye fa-1x pointer" aria-hidden="true" ></i></a></td>
                       <td ><a class="btn btn-warning btn-sm" ng-click="show=true ; ct.show=true" ng-show="!show"><i class="fa fa-pencil-square-o fa-1x pointer" aria-hidden="true" ></i></a></td>
                       <td ><a ng-show="show" class="btn btn-success btn-sm" ng-click="ct.editCategory(category,$index);show=false"><i  class="fa fa-check fa-1x pointer" aria-hidden="true" ></i></a></td>
                     </tr>
