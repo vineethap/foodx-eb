@@ -11,8 +11,8 @@ function OrderResource($resource) {
       method: 'GET',
       isArray:true
     },
-    remove: {
-      method: 'DELETE'
+    getOrder: {
+      method: 'GET'
     }
   });
 }

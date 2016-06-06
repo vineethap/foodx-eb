@@ -43,3 +43,10 @@ export function findAll(req, res) {
       })
     .catch(validationError(res));
 };
+export function findOrder(req, res) {
+  return Orders.findOne({_id:req.params.id}).exec()
+    .then(order=> {
+      res.json(order);
+      })
+    .catch(validationError(res));
+};

@@ -15,4 +15,13 @@ angular.module('foodXApp')
         parent:'main',
         authenticate: true
       })
+      .state('view', {
+        url     : '/order:id',
+        templateUrl: 'app/orders/vieworder.html',
+        controller: 'OrderController',
+        controllerAs: 'vm', 
+        parent: 'main',
+        authenticate: true
+    
+      })
     })

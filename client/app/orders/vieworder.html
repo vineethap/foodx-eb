@@ -1,0 +1,46 @@
+
+<div class="page-content-wrapper">
+	<div class="content" ng-init="vm.initItems()">
+		<div class="container-fluid container-fixed-lg" ng-init="ct.initSubCategory()">
+			<ul class="breadcrumb">
+				<li>
+					<a  class="active" ui-sref="main">Home</a>
+				</li>
+				<li>
+					<a ui-sref="orders"class="active">orders</a>
+				</li>
+			</ul>
+			<div class="panel panel-transparent">
+				<div class="panel-heading">
+					<div class="panel-title">Received orders</div>
+				</div>
+				<div class="panel-body">
+					<div class="table-responsive">
+						<div id="basicTable_wrapper" class="dataTables_wrapper form-inline no-footer">
+							<table class="table table-hover dataTable no-footer" datatable="ng" id="basicTable" role="grid" dt-options="dtOptionsRequestManager">
+								<thead>
+									<tr role="row"  >
+										<th>#</th>
+										<th>item</th>
+										<th>qty</th>
+										<th>price</th>
+										<th>subtotal</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr ng-repeat="item in vm.items track by $index">
+										<td>{{$index+1}}</td>
+										<td>{{item.id}}</td>
+										<td>{{item.qty }}</td>
+										<td>{{item.price}}</td>
+										<td>{{item.qty*item.price}}</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

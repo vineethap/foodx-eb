@@ -12,6 +12,7 @@ class ItemViewCtrl {
     this.Review=ItemReview;
     this.current_user=Auth.getCurrentUser()
     this.show_btn=true;
+    this.starRating3 = 2;
   }
 	init(){
 	 	this.item=this.Item.getItem({id:this.id});
@@ -22,9 +23,10 @@ class ItemViewCtrl {
     this.item_reviews=this.Review.getItemreviews({item_id:this.id})
 	};
 	submitReview(item){
+    console.log(this.starRating3)
 		 this.Review.createReview({
       item_id:this.item._id,
-      rating:item.rating,
+      rating:this.starRating3,
       userid:this.current_user._id,
       itemname:item.itemname,
 			comment_title:item.comment_title,

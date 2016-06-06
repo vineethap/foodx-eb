@@ -8,7 +8,8 @@ import {Schema} from 'mongoose';
   total_price:Number,
   status:String,
   items: { type : Array , "default" : [] },
-  time:Date
+  time:Date,
+  username:String,
  });
 
 export default mongoose.model('Orders',OrdersSchema);
