@@ -1,15 +1,29 @@
 <br/>
 <div class="page-content-wrapper">
   <div class="content">
-    <div class="container" ng-init="vm.init()">
-      <div class="row">
-      	<div class="panel panel-default panel-height " ng-if="vm.user!=''">
-            <div class="row">
-  			      <div class=" col-md-2 text-center" ng-repeat="_image in vm.item.item_image">
-                <img ng-if="_image!==''" class="thumbnail-wrapper d100 circular inline pointer m-t-30 m-l-30 "  ng-src="{{_image}}" >
+    <div class="container-fluid container-fixed-lg" ng-init="vm.init()">
+       <ul class="breadcrumb">
+        <li>
+          <a  class="active" ui-sref="main">Home</a>
+        </li>
+        <li>
+          <a ui-sref="chef"class="active">chefs</a>
+        </li>
+       <li>
+          <a ui-sref="profile({user:chef,id:vm.user._id})"class="active">item</a>
+        </li>
+      </ul>
+       <div class="container-fluid container-fixed-lg bg-white">
+    <div class="panel panel-default">
+        <!-- <div class="panel-heading">
+          <div class="panel-title">item</div>
+        </div> -->
+      	<div class="panel-body" ng-if="vm.user!=''">
+  			      <div class="col-md-3 no-padding" ng-repeat="_image in vm.item.item_image">
+                <img ng-if="_image!==''" class="thumbnail-wrapper d100 circular inline pointer"  ng-src="{{_image}}">
                  
               </div>
-              <div class="col-md-4 text-align ">
+              <div class="col-md-4 col-md-offset-1 no-padding">
                 <label class="text-muted text-size">{{vm.item.itemname}}</label>
                 <br/>
 
@@ -18,16 +32,14 @@
                 <label class="text-muted text-size1">{{vm.item.category}}</label>
                 <label class="text-muted text-size1">{{vm.item.subcategory}}</label>
               </div>
-            </div>
-            <div class=" m-b-10 m-r-10">
-              <p class="pull-right profile ">{{vm.user.role}} #{{vm.user.userid}}</p>
-            </div>
+           
           </div>
       </div>
-      <div class="row" >
-	      <div class="panel panel-default ">
+      </div>
+      <div class="container-fluid container-fixed-lg bg-white" >
+	      <div class="panel panel-default " >
 	      <br/>
-		      <button ng-show="!vm.item_comments" class="btn btn-warning btn-cons m-l-10" ng-click="review=true">write an item review</button>
+		      <button ng-hide="vm.item_comments || !vm.show_btn " class="btn btn-warning btn-cons m-l-10" ng-click="review=true ; vm.show_btn=false;  show_inputs=true" >Rate this </button>
 		       <br/>
 		       <br/>
 		      <div ng-show="review" class="m-l-10">
@@ -45,7 +57,7 @@
 					<div class="row">
 						<div class="col-md-4">
 							<div class="form-group" ng-show="show_inputs ">
-								<input type="text" class="form-control" ng-model="vm.item.comment_title" placeholder="Title">
+								<input type="text" class="form-control" ng-model="vm.item.comment_title" placeholder="Headline of your review">
 								<br/>
 							  <textarea type="text" name="comment" class="form-control" ng-model="vm.item.comment"placeholder="your comment"
 	               ></textarea> 
@@ -56,9 +68,9 @@
 						</div>
 					</div>
 				</div>
-				<div style="display:done;" >
-          <label ng-if="vm.item_reviews" class="text-muted text-size">Top Customer Reviews</label>
-          <label ng-if="!vm.item_reviews" class="text-muted text-size1">No reviews yet</label>
+				<div style="display:done;">
+          <p ng-show="vm.item_reviews.length!=0" class="text-muted text-size">Top Customer Reviews</p>
+          <p ng-show="vm.item_reviews.length==0" class="text-muted text-size1 m-l-10">No reviews yet</p>
           <ul class="list-group"  >
             <li class="list-group-item" ng-repeat="review in vm.item_reviews" >
               <div class="alert alert-success"> 

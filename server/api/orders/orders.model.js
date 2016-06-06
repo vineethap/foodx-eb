@@ -7,7 +7,8 @@ import {Schema} from 'mongoose';
   delivary_address:String,
   total_price:Number,
   status:String,
-  items: { type : Array , "default" : [] }
+  items: { type : Array , "default" : [] },
+  time:Date
  });
 
 export default mongoose.model('Orders',OrdersSchema);

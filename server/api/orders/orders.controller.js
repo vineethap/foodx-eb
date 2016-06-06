@@ -26,6 +26,7 @@ export function create(req, res, next) {
      total += price;
   }
   newOrders.total_price=total;
+  newOrders.time=Date.now();
   newOrders.save()
     .then(function(orders) {
     	res.json({ orders:orders,message:"created new order" });
@@ -34,4 +35,11 @@ export function create(req, res, next) {
       console.log(err)
 
     });
+};
+export function findAll(req, res) {
+  return Orders.find().exec()
+    .then(orders=> {
+      res.json(orders);
+      })
+    .catch(validationError(res));
 };

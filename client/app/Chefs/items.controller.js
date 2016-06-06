@@ -11,6 +11,7 @@ class ItemViewCtrl {
     this.id=$stateParams.id;
     this.Review=ItemReview;
     this.current_user=Auth.getCurrentUser()
+    this.show_btn=true;
   }
 	init(){
 	 	this.item=this.Item.getItem({id:this.id});

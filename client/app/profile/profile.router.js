@@ -12,7 +12,7 @@ angular.module('foodXApp.admin')
         authenticate: true
       })
       .state('singleitem', {
-        url     : '/item/:id',
+        url     : '/chef/:item/:id',
         templateUrl: 'app/Chefs/itemview.html',
         controller: 'ItemViewCtrl',
         controllerAs: 'vm', 

@@ -32,38 +32,37 @@
       </ul>
      <div class="container-fluid container-fixed-lg bg-white">
     <div class="panel panel-default">
-        <div class="panel-heading">
-            <div class="panel-title">userprofile</div>
+      <div class="panel-heading">
+        <div class="panel-title">userprofile</div>
+      </div>
+      <div class="panel-body">
+        <div class="col-md-3 no-padding">
+          <img class="thumbnail-wrapper d100 circular inline pointer  "  ng-src="{{vm.user.profile_img? vm.user.profile_img:'assets/images/default_user.jpg'}}" ng-click="vm.openModal()" tooltip-placement="bottom" uib-tooltip="change profile picture">
+
         </div>
-        <div class="panel-body">
-            <div class="col-md-3 no-padding">
-                 <img class="thumbnail-wrapper d100 circular inline pointer  "  ng-src="{{vm.user.profile_img? vm.user.profile_img:'assets/images/default_user.jpg'}}" ng-click="vm.openModal()" tooltip-placement="bottom" uib-tooltip="change profile picture">
-                 
-            </div>
-            <div class="col-md-4 col-md-offset-1 no-padding">
-                 <label class="text-muted text-size">{{vm.user.name}} {{vm.user.lastname}} </label>
-                <br/>
-                <label class="text-muted text-size1">{{vm.user.address}}</label>
-                <br/>
-                
-                <label class="text-muted text-size1">{{Mobile}}435435345</label>
-                 <br/>
-                <label class="text-muted text-size1">{{vm.user.email}}</label>
-            </div>
-            <div class="col-md-4">
-              <button class="btn btn-default pull-right" ng-click="vm.edit=true;vm.open('lg',false)"><i class="glyphicon glyphicon-pencil"></i> Edit</button>
-              <br/>
-              <br/>
-              <p class="pull-right profile ">{{vm.user.role}} #{{vm.user.userid}}</p>
-            </div>
+        <div class="col-md-4 col-md-offset-1 no-padding">
+          <label class="text-muted text-size">{{vm.user.name}} {{vm.user.lastname}} </label>
+          <br/>
+          <label class="text-muted text-size1">{{vm.user.address}}</label>
+          <br/>
+
+          <label class="text-muted text-size1">{{Mobile}}435435345</label>
+          <br/>
+          <label class="text-muted text-size1">{{vm.user.email}}</label>
         </div>
+        <div class="col-md-4">
+          <button class="btn btn-default pull-right" ng-click="vm.edit=true;vm.open('lg',false)"><i class="glyphicon glyphicon-pencil"></i> Edit</button>
+          <br/>
+          <br/>
+          <p class="pull-right profile ">{{vm.user.role}} #{{vm.user.userid}}</p>
+        </div>
+      </div>
     </div>
   </div>
 
     <div class="container-fluid container-fixed-lg bg-white" ng-if="vm.user.role=='chef'">
     <div class="panel panel-default">
-    <!-- <div class="row" >
-      <div class="panel panel-default panel-height"> -->
+    
         <ul class="nav nav-tabs nav-tabs-linetriangle">
           <li class="active">
             <a data-toggle="tab" pg-tab="" href="#item" aria-expanded="true"><span>Foods</span></a>
@@ -109,7 +108,7 @@
                     <button class="btn btn-danger btn-sm" ng-if="item.active">Disable</button>
                     <button class="btn btn-success btn-sm" ng-if="!item.active">Enable</button>
                   </td>
-                  <td ><a ui-sref="singleitem({id:item._id})"><i class="fa fa-eye fa-1x pointer" aria-hidden="true" ></i></a></td>
+                  <td ><a ui-sref="singleitem({item:item.itemname,id:item._id})"><i class="fa fa-eye fa-1x pointer" aria-hidden="true" ></i></a></td>
                   <td ><a ng-click="vm.editItem(item)"> <i class="fa fa-pencil fa-1x pointer" aria-hidden="true"  tooltip-placement="bottom" uib-tooltip="edit item"></i></a></td>
                   <td ng-if="vm.current_user.role=='admin'"><a ng-click="vm.openFeaturedModal(item)" tooltip-placement="bottom" uib-tooltip="make it featured">
                     <i class="fa fa-asterisk fa-1x pointer" aria-hidden="true"  ></i></a>

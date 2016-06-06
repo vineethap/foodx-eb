@@ -1,8 +1,50 @@
 <div class="page-content-wrapper">
-  <div class="content">
-    <div class="container">
-    <br/>
-    <h3>Recieved orders</h3>
+  <div class="content" ng-init="vm.init()">
+    <div class="container-fluid container-fixed-lg" ng-init="ct.initSubCategory()">
+     <ul class="breadcrumb">
+        <li>
+          <a  class="active" ui-sref="main">Home</a>
+        </li>
+        <li>
+          <a ui-sref="orders"class="active">orders</a>
+        </li>
+       
+      </ul>
+      <div class="panel panel-transparent">
+        <div class="panel-heading">
+          <div class="panel-title">Received orders</div>
+        </div>
+         <div class="panel-body">
+            <div class="table-responsive">
+              <div id="basicTable_wrapper" class="dataTables_wrapper form-inline no-footer">
+                <table class="table table-hover dataTable no-footer" datatable="ng" id="basicTable" role="grid" dt-options="dtOptionsRequestManager">
+                  <thead>
+                    <tr role="row"  >
+                      <th>#</th>
+                      <th>item</th>
+                      <th>odered by</th>
+                      <th>qty</th>
+                      <th>price</th>
+                      <th>placed at</th>
+                      <th>status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  	<tr ng-repeat="order in vm.orders track by $index">
+                  		<td></td>
+                  		<td>{{order.createdBy}}</td>
+                  		<td></td>
+                  		<td></td>
+                  		<td></td>
+                  		<td>{{order.time |date}}</td>
+                  		<td>{{order.status}}</td>
+                  	</tr>
+                  </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    </div>
-    </div>
+  </div>
+</div>
