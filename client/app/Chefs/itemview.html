@@ -42,17 +42,10 @@
 		      <button ng-hide="vm.item_comments || !vm.show_btn " class="btn btn-warning btn-cons m-l-10" ng-click="review=true ; vm.show_btn=false;  show_inputs=true" >Rate this </button>
 		       <br/>
 		       <br/>
-		      <div star-rating rating="vm.starRating3" ng-show="review" class="m-l-10" >
-			     <!--  <fieldset  class="rating " >
-					    <legend>Please rate:</legend>
-					    <input type="radio" id="star5" name="rating" ng-model="vm.item.rating" value="5" /><label for="star5" >5 stars</label>
-					    <input type="radio" id="star4" name="rating" ng-model="vm.item.rating" value="4" /><label for="star4" >4 stars</label>
-					    <input type="radio" id="star3" name="rating" ng-model="vm.item.rating" value="3" /><label for="star3" >3 stars</label>
-					    <input type="radio" id="star2" name="rating" ng-model="vm.item.rating" value="2" /><label for="star2" >2 stars</label>
-					    <input type="radio" id="star1" name="rating" ng-model="vm.item.rating" value="1" /><label for="star1" >1 star</label>
-						</fieldset> -->
+		      <div  ng-show="review" class="m-l-10" >
+			     <div star-rating rating="vm.starRating3"></div>
 						<br/>
-						<a ng-click="show_inputs=true" ng-show="!vm.show_btn" >Write a review</a>
+						<a ng-click="show_inputs=true" ng-show="!vm.item_comments" >Write a review</a>
 						<br/>
 					<div class="row">
 						<div class="col-md-4">
