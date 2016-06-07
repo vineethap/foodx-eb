@@ -7,7 +7,10 @@
 					<a  class="active" ui-sref="main">Home</a>
 				</li>
 				<li>
-					<a ui-sref="orders"class="active">orders</a>
+					<a ui-sref="order"class="active">orders</a>
+				</li>
+				<li>
+					<a ui-sref="#"class="active">view order</a>
 				</li>
 			</ul>
 			<div class="panel panel-transparent">
@@ -34,6 +37,13 @@
 										<td>{{item.qty }}</td>
 										<td>{{item.price}}</td>
 										<td>{{item.qty*item.price}}</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td>total:</td>
+										<td>{{vm.order.total_price | currency:"₹":0}}</td>
 									</tr>
 								</tbody>
 							</table>
