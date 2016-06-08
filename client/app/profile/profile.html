@@ -37,7 +37,8 @@
       </div>
       <div class="panel-body">
         <div class="col-md-3 no-padding">
-          <img class="thumbnail-wrapper d100 circular inline pointer  "  ng-src="{{vm.user.profile_img? vm.user.profile_img:'assets/images/default_user.jpg'}}" ng-click="vm.openModal()" tooltip-placement="bottom" uib-tooltip="change profile picture">
+        <a ng-click="vm.openModal()">
+          <img class="thumbnail-wrapper d100 circular inline pointer  "  ng-src="{{vm.user.profile_img? vm.user.profile_img:'assets/images/default_user.jpg'}}"  tooltip-placement="bottom" uib-tooltip="change profile picture"></a>
 
         </div>
         <div class="col-md-4 col-md-offset-1 no-padding">
@@ -76,8 +77,8 @@
         </ul>      
       <div class="tab-content">
         <div class="tab-pane active" id="item">
-        <br/>
-          <div class="row ">
+       
+          <div class="panel-body ">
             <button  class="btn btn-warning btn-cons m-l-10 btn-sm" ng-click="vm.addItems()">+Item</button>
              <div class="table-responsive">
              <div id="basicTable_wrapper" class="dataTables_wrapper form-inline no-footer">

@@ -28,7 +28,7 @@ export function create(req, res, next) {
   newOrders.total_price=total;
   newOrders.time=Date.now();
   newOrders.save()
-    .then(function(orders) {
+    .then(orders=>{
     	res.json({ orders:orders,message:"created new order" });
       })
     .catch(err => {

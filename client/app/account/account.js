@@ -38,12 +38,13 @@ angular.module('foodXApp')
       });
 
   })
-  .run(function($rootScope, $location, Auth) {
-    $rootScope.$on('$stateChangeStart', function(event, next, nextParams, current) {
-      if (next.name === 'logout' && current && current.name && !current.authenticate) {
-        next.referrer = current.name;
-      }
-   
-    });
-    
+  .run(function ($rootScope, $location, Auth) {
+// Redirect to login if route requires auth and you're not logged in
+ $rootScope.$on('$stateChangeStart', function (event, next) {
+  Auth.isLoggedIn(function(loggedIn) {
+    if (!loggedIn) {
+      $location.path('/');
+    }
   });
+});
+});
