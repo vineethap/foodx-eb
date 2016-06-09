@@ -23,7 +23,10 @@ var UserSchema = new Schema({
   provider: String,
   salt: String,
   active: { type: Boolean, default: true },
-  profile_img: String
+  profile_img: String ,
+  phone:Number,
+  timestamp:{type:Date},
+  otp:{type:Number,index: { expires: 120 } }
 });
 
 var CounterSchema = new Schema({

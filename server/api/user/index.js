@@ -13,4 +13,7 @@ router.get('/me', auth.isAuthenticated(), controller.me);
 router.put('/:id/password', auth.isAuthenticated(), controller.changePassword);
 router.get('/:id', auth.isAuthenticated(), controller.show);
 router.post('/',auth.hasRole('admin'), controller.create);
+router.post('/customer', auth.hasRole('customer'),controller.generateOtp);
+router.post('/verify',auth.hasRole('customer'), controller.verifyOtp);
+
 module.exports = router;

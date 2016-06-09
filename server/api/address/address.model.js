@@ -9,7 +9,6 @@ var AddressSchema = new Schema({
   address_line1:String,
   address_line2:String,
   landmark:String,
-  place:String,
   pin:Number,
   address_type:String
 });

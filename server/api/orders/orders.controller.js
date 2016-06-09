@@ -26,6 +26,7 @@ export function create(req, res, next) {
      total += price;
   }
   newOrders.total_price=total;
+  newOrders.status="pending";
   newOrders.time=Date.now();
   newOrders.save()
     .then(orders=>{

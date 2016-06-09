@@ -1,7 +1,8 @@
 'use strict';
 import Customer from './customer.model';
 import  shortid from 'shortid';
-
+import jwt from 'jsonwebtoken';
+import config from '../../config/environment';
 function validationError(res, statusCode) {
   statusCode = statusCode || 422;
   return function(err) {
@@ -41,6 +42,9 @@ export function generateOtp(req, res, next) {
  				newcustomer.timestamp=Date.now();
     		newcustomer.save()
 	    	.then(function(customer) {
+           var token = jwt.sign({ _id: customer._id }, config.secrets.session, {
+            expiresIn: 60 * 60 * 5
+          });
 	    		res.json({ customer:customer});
 	      })
 	    	.catch(validationError(res));
@@ -49,25 +53,34 @@ export function generateOtp(req, res, next) {
         customer.otp=Math.floor(100000 + Math.random() * 900000);
     	  customer.save()
     	  .then(function(customer) {
+            var token = jwt.sign({ _id: customer._id }, config.secrets.session, {
+              expiresIn: 60 * 60 * 5
+            });
 	    		res.json(customer);
 	      })
 	  	}
     })
     .catch(validationError(res));
 };
+/*Verify otp*/
 export function verifyOtp(req,res,next) {
 	return Customer.findOne({phone:req.body.phone}).exec()
     .then(customer=> {
-    	let d=customer.timestamp;
-    	let time=d.getTime();
-    	 time += 2 * 60* 1000;
-    	let current_time=Date.now();
-    	if(current_time <= time && customer.otp==req.body.otp){
-    		console.log("done")
-        res.json({message:"valid otp."})
-    	}else{
-        res.json({message:"invalid otp."})
+      if(customer){
+        let d=customer.timestamp;
+        let time=d.getTime();
+         time += 2 * 60* 1000;
+        let current_time=Date.now();
+        if(current_time <= time && customer.otp==req.body.otp){
+          console.log("done")
+          res.json({message:"valid otp."})
+        }else{
+          res.json({message:"invalid otp."})
+        }
+      }else{
+       res.json({message:"not a registered user"}) 
       }
+    	
     })
     .catch(validationError(res));
 	}

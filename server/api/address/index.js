@@ -5,5 +5,5 @@ import * as controller from './address.controller';
 import * as auth from '../../auth/auth.service';
 
 var router = new Router();
-router.post('/', controller.create);
+router.post('/',auth.hasRole('customer'), controller.create);
 module.exports = router;
