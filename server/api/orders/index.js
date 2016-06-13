@@ -8,4 +8,5 @@ var router = new Router();
 router.post('/',auth.hasRole('customer'), controller.create);
 router.get('/',controller.findAll);
 router.get('/:id',controller.findOrder);
+router.get('/customer/:id',controller.findUserOrders)
 module.exports = router;

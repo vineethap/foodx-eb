@@ -13,6 +13,11 @@ function OrderResource($resource) {
     },
     getOrder: {
       method: 'GET'
+    },
+    getUserOrders:{
+     method:'GET',
+     isArray:true,
+     url:'/api/orders/customer/:id'
     }
   });
 }

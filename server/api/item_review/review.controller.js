@@ -16,8 +16,7 @@ function handleError(res, statusCode) {
   };
 }
 
-export function create(req, res, next) {
-  console.log('hello', req.body)
+export function create(req, res, next) { 
   var review = new Review(req.body);
   review.active=true;
   review.time=Date.now();

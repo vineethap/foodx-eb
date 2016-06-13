@@ -1,0 +1,51 @@
+
+	<div class="page-content-wrapper">
+	<div class="content" ng-init="vm.initUserorders()">
+		<div class="container-fluid container-fixed-lg" ng-init="ct.initSubCategory()">
+			<ul class="breadcrumb">
+				<li>
+					<a  class="active" ui-sref="main">Home</a>
+				</li>
+				<li>
+					<a ui-sref="customer"class="active">customer</a>
+				</li>
+				<li>
+					<a ui-sref="#"class="active"> orders</a>
+				</li>
+			</ul>
+			<div class="panel panel-transparent">
+				<div class="panel-heading">
+					<div class="panel-title">Received orders</div>
+				</div>
+				<div class="panel-body">
+					<div class="table-responsive">
+						<div id="basicTable_wrapper" class="dataTables_wrapper form-inline no-footer">
+							<table class="table table-hover dataTable no-footer" datatable="ng" id="basicTable" role="grid" dt-options="dtOptionsRequestManager">
+								<thead>
+									<tr role="row"  >
+										<th>#</th>
+										<th>deliveryAddress</th>
+										<th>items</th>
+										<th>total</th>
+										<th>status</th>
+										<th>date</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr ng-repeat="item in vm.order track by $index">
+										<td>{{$index+1}}</td>
+										<td>{{item.delivery_slot}}</td>
+										<td>{{item.items.length }}</td>
+										<td>{{item.total_price}}</td>
+										<td>{{item.status}}</td>
+										<td>{{item.time | date}}</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -24,12 +24,19 @@ export function create(req, res, next) {
   req.checkBody('address_line2', 'empty address_line2').notEmpty();
   req.checkBody('address_line2', 'empty address_line2').notEmpty();
   req.checkBody('landmark', 'empty landmark').notEmpty();
-   req.checkBody('address_type', 'empty address_type').notEmpty();
-   req.checkBody('pin', 'empty pin').notEmpty().isInt();
+  req.checkBody('address_type', 'empty address_type').notEmpty();
+  req.checkBody('pin', 'empty pin').notEmpty().isInt();
   newAddress.active=true;
   newAddress.save()
     .then(function(address) {
     	res.json({ address:address,message:"created new address" });
+      })
+    .catch(validationError(res));
+};
+export function getAddress(req, res) {
+  return Address.find({userid:req.params.id}).exec()
+    .then(Address=> {
+      res.json(Address);
       })
     .catch(validationError(res));
 };

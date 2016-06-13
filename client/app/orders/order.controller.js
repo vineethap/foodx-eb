@@ -22,7 +22,6 @@ class OrderController {
     this.Orders.getOrder({id:this.$stateParams.id}).$promise.then(res=>{
      this.order=res;
      this.items=res.items;
-    
     });
   }
 }

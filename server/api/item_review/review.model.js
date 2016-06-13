@@ -1,5 +1,4 @@
 import mongoose from 'mongoose';
-// mongoose.Promise = require('bluebird');
 import {Schema} from 'mongoose';
 var ReviewSchema = new Schema({
   itemname: String,

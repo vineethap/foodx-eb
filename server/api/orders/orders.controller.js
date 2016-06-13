@@ -51,3 +51,10 @@ export function findOrder(req, res) {
       })
     .catch(validationError(res));
 };
+export function findUserOrders(req, res) {
+  return Orders.find({userid:req.params.id}).exec()
+    .then(orders=> {
+      res.json(orders);
+      })
+    .catch(validationError(res));
+};

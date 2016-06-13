@@ -11,7 +11,7 @@
           </div>
           <ul class="dropdown-menu dd-open" uib-dropdown-menu role="menu" aria-labelledby="single-button">
             <li role="menuitem">
-              <a ui-sref="profile({id:nav.getCurrentUser()._id})">Profile</a>
+              <a ui-sref="profile({id:nav.getCurrentUser()._id,user:nav.getCurrentUser().role})">Profile</a>
             </li>
             <li role="menuitem">
               <a ui-sref="logout">Logout</a>

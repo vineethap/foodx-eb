@@ -55,55 +55,62 @@ export function create(req, res, next) {
     })
     .catch(validationError(res));
 }
-export function generateOtp(req, res, next) {
-  console.log("jnf",req.body)
-  return User.findOne({phone:req.body.phone}).exec()
+
+/*creates a new customer*/
+export function customerSignUp(req, res, next) {
+  var newuser = new User(req.body);
+  newuser.role = 'customer';
+  newuser.provider = 'local';
+  req.checkBody({'phone': { // 
+    notEmpty: true,
+    isInt:true,
+    isLength: {
+      options: [{ min: 10, max: 10 }],
+      errorMessage: 'Must be  10 chars long' // Error message for the validator, takes precedent over parameter message 
+    },
+    errorMessage: 'Invalid phone'
+    }
+  })
+   var errors = req.validationErrors();
+    if (errors) {
+      res.json(400,{"error":errors});
+      return;
+    }
+  newuser.otp=Math.floor(100000 + Math.random() * 900000);
+  newuser.timestamp=Date.now();
+  newuser.save()
+  .then(function(customer) {
+    var token = jwt.sign({ _id: customer._id }, config.secrets.session, {
+      expiresIn: 60 * 60 * 5
+    });
+    console.log(token)
+    res.json({ customer:customer});
+  })
+  .catch(validationError(res));
+    
+};
+
+/*customer login*/
+export function customerLogin(req, res, next) {
+return User.findOne({phone:req.body.phone}).exec()
     .then(customer=> {
-      if (!customer) {
-        console.log("here")
-        var newuser = new User(req.body);
-        newuser.role = 'customer';
-        newuser.provider = 'local';
-        req.checkBody({'phone': { // 
-          notEmpty: true,
-          isInt:true,
-          isLength: {
-            options: [{ min: 10, max: 10 }],
-            errorMessage: 'Must be  10 chars long' // Error message for the validator, takes precedent over parameter message 
-          },
-          errorMessage: 'Invalid phone'
-          }
-        })
-         var errors = req.validationErrors();
-          if (errors) {
-            res.json(400,{"error":errors});
-            return;
-          }
-        newuser.otp=Math.floor(100000 + Math.random() * 900000);
-        newuser.timestamp=Date.now();
-        newuser.save()
-        .then(function(customer) {
-           var token = jwt.sign({ _id: customer._id }, config.secrets.session, {
-        expiresIn: 60 * 60 * 5
-      });
-           console.log(token)
-          res.json({ customer:customer});
-        })
-        .catch(validationError(res));
-        
-      }else{
-        customer.otp=Math.floor(100000 + Math.random() * 900000);
-        customer.save()
+      if(customer){
+         customer.otp=Math.floor(100000 + Math.random() * 900000);
+         customer.timestamp=Date.now();
+         customer.save()
         .then(function(customer) {
             var token = jwt.sign({ _id: customer._id }, config.secrets.session, {
-        expiresIn: 60 * 60 * 5
-      });
-          res.json(customer);
+              expiresIn: 60 * 60 * 5
+            });
+          res.json({message:"login successfull",customer:customer});
         })
+      }else{
+        res.json({message:"no such user"})
       }
     })
     .catch(validationError(res));
-};
+  }
+
 /**
  * Get a single user
  */
@@ -195,6 +202,8 @@ export function updateDetails(req, res, next) {
     })
     .catch(err => next(err));
 }
+
+/*verify otp*/
 export function verifyOtp(req,res,next) {
   return User.findOne({phone:req.body.phone}).exec()
     .then(customer=> {
@@ -204,7 +213,6 @@ export function verifyOtp(req,res,next) {
          time += 2 * 60* 1000;
         let current_time=Date.now();
         if(current_time <= time && customer.otp==req.body.otp){
-          console.log("done")
           res.json({message:"valid otp."})
         }else{
           res.json({message:"invalid otp."})

@@ -520,18 +520,18 @@
 	"buffers":
 	[
 		{
-			"file": "/home/bititude/Documents/projects/foodx-web/server/api/categories/category.model.js",
+			"file": "/home/bititude/Documents/projects/foodx-web/dist/client/index.html",
 			"settings":
 			{
-				"buffer_size": 316,
+				"buffer_size": 4960,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/home/bititude/Documents/projects/foodx-web/server/api/items/items.controller.js",
+			"file": "/home/bititude/Documents/projects/foodx-web/server/api/user/user.controller.js",
 			"settings":
 			{
-				"buffer_size": 8028,
+				"buffer_size": 3560,
 				"line_ending": "Unix"
 			}
 		},
@@ -539,39 +539,33 @@
 			"file": "/home/bititude/Documents/projects/foodx-web/Gruntfile.js",
 			"settings":
 			{
-				"buffer_size": 20850,
+				"buffer_size": 20939,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/home/bititude/Documents/projects/foodx-web/server/routes.js",
+			"file": "/home/bititude/Documents/projects/foodx-web/client/index.html",
 			"settings":
 			{
-				"buffer_size": 878,
+				"buffer_size": 9732,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/home/bititude/Documents/projects/foodx-web/client/app/main/main.html",
+			"contents": "Searching 49 files for \"things/\"\n\n/home/bititude/Documents/projects/foodx-web/client/app/main/main.controller.js:\n   32  \n   33    deleteThing(thing) {\n   34:     this.$http.delete('/api/things/' + thing._id);\n   35    }\n   36    toggleMenu(event){\n\n1 match in 1 file\n",
 			"settings":
 			{
-				"buffer_size": 2803,
-				"line_ending": "Unix"
+				"buffer_size": 268,
+				"line_ending": "Unix",
+				"name": "Find Results",
+				"scratch": true
 			}
 		},
 		{
-			"file": "/home/bititude/Documents/projects/foodx-web/server/api/user/user.model.js",
+			"file": "/home/bititude/Documents/projects/foodx-web/client/app/main/main.controller.js",
 			"settings":
 			{
-				"buffer_size": 5188,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "customer.model.js",
-			"settings":
-			{
-				"buffer_size": 527,
+				"buffer_size": 1137,
 				"line_ending": "Unix"
 			}
 		}
@@ -622,18 +616,47 @@
 	"expanded_folders":
 	[
 		"/home/bititude/Documents/projects/foodx-web",
+		"/home/bititude/Documents/projects/foodx-web/client",
+		"/home/bititude/Documents/projects/foodx-web/client/components/socket",
 		"/home/bititude/Documents/projects/foodx-web/dist",
-		"/home/bititude/Documents/projects/foodx-web/server"
+		"/home/bititude/Documents/projects/foodx-web/dist/client",
+		"/home/bititude/Documents/projects/foodx-web/dist/client/assets",
+		"/home/bititude/Documents/projects/foodx-web/dist/client/assets/images",
+		"/home/bititude/Documents/projects/foodx-web/server/api",
+		"/home/bititude/Documents/projects/foodx-web/server/api/user",
+		"/home/bititude/Documents/projects/foodx-web/server/auth/local"
 	],
 	"file_history":
 	[
+		"/home/bititude/Documents/projects/foodx-web/dist/client/index.html",
+		"/home/bititude/Documents/projects/foodx-web/server/api/categories/category.model.js",
+		"/home/bititude/Documents/projects/foodx-web/server/api/items/items.controller.js",
+		"/home/bititude/Documents/projects/foodx-web/server/api/user/user.model.js",
+		"/home/bititude/Documents/projects/foodx-web/server/config/environment/development.js",
+		"/home/bititude/Documents/projects/foodx-web/server/config/environment/index.js",
+		"/home/bititude/Documents/projects/foodx-web/server/config/environment/production.js",
+		"/home/bititude/Documents/projects/foodx-web/server/config/seed.js",
+		"/home/bititude/Documents/projects/foodx-web/server/app.js",
+		"/home/bititude/Documents/projects/foodx-web/client/app/app.js",
+		"/home/bititude/Documents/projects/foodx-web/client/app/categories/category.controller.js",
+		"/home/bititude/Documents/projects/foodx-web/client/app/main/main.controller.js",
+		"/home/bititude/Documents/projects/foodx-web/.tmp/app/categories/category.controller.js",
+		"/home/bititude/Documents/projects/foodx-web/server/routes.js",
+		"/home/bititude/Documents/projects/foodx-web/client/app/admin/admin.html",
+		"/home/bititude/Documents/projects/foodx-web/client/app/employees/employees.html",
+		"/home/bititude/Documents/projects/foodx-web/client/app/Chefs/chefs.html",
+		"/home/bititude/Documents/projects/foodx-web/client/app/categories/category.html",
+		"/home/bititude/Documents/projects/foodx-web/client/app/profile/profile.html",
+		"/home/bititude/Documents/projects/foodx-web/client/app/main/main.controller.spec.js",
+		"/home/bititude/Documents/projects/foodx-web/client/assets/plugins/pace/pace.min.js",
+		"/home/bititude/Documents/projects/foodx-web/server/config/express.js",
+		"/home/bititude/Documents/projects/foodx-web/Gruntfile.js",
+		"/home/bititude/Documents/projects/foodx-web/server/api/customers/customer.model.js",
+		"/home/bititude/Documents/projects/foodx-web/client/app/main/main.html",
 		"/home/bititude/Documents/projects/foodx-web/client/components/sidebar/sidebar.html",
 		"/home/bititude/Documents/projects/foodx-web/client/app/profile/items.html",
-		"/home/bititude/Documents/projects/foodx-web/client/app/main/main.controller.js",
 		"/home/bititude/Documents/projects/foodx-web/package.json",
 		"/home/bititude/Documents/projects/foodx-web/server/config/socketio.js",
-		"/home/bititude/Documents/projects/foodx-web/server/routes.js",
-		"/home/bititude/Documents/projects/foodx-web/Gruntfile.js",
 		"/home/bititude/Documents/projects/foodx-web/server/api/files/files.model.js",
 		"/home/bititude/Documents/projects/foodx-web/node_modules/grunt-contrib-imagemin/node_modules/imagemin/package.json",
 		"/home/bititude/Documents/projects/foodx-web/node_modules/grunt-contrib-imagemin/package.json",
@@ -643,18 +666,10 @@
 		"/home/bititude/Documents/projects/foodx-web/server/api/items/items.model.js",
 		"/home/bititude/Documents/projects/foodx-web/server/api/item_review/review.model.js",
 		"/home/bititude/Documents/projects/foodx-web/client/app/main/main.less",
-		"/home/bititude/Documents/projects/foodx-web/client/app/profile/profile.html",
-		"/home/bititude/Documents/projects/foodx-web/client/app/categories/category.controller.js",
 		"/home/bititude/Documents/projects/foodx-web/server/api/customers/customer.controller.js",
-		"/home/bititude/Documents/projects/foodx-web/server/config/express.js",
-		"/home/bititude/Documents/projects/foodx-web/server/app.js",
 		"/home/bititude/Documents/projects/foodx-web/server/index.js",
-		"/home/bititude/Documents/projects/foodx-web/server/api/items/items.controller.js",
-		"/home/bititude/Documents/projects/foodx-web/server/api/categories/category.model.js",
-		"/home/bititude/Documents/projects/foodx-web/client/app/categories/category.html",
 		"/home/bititude/Documents/projects/foodx-web/server/api/user/index.js",
 		"/home/bititude/Documents/projects/foodx-web/client/app/profile/profile.controller.js",
-		"/home/bititude/Documents/projects/foodx-web/client/app/admin/admin.html",
 		"/home/bititude/Documents/projects/foodx-web/client/app/admin/admin.less",
 		"/home/bititude/Documents/projects/foodx-web/server/api/user/user.controller.js",
 		"/home/bititude/Documents/projects/foodx-web/server/api/categories/category.controller.js",
@@ -663,13 +678,10 @@
 		"/home/bititude/Documents/projects/foodx-web/client/app/Chefs/rating.directive.js",
 		"/home/bititude/Documents/projects/foodx-web/client/components/fileupload/fileupload.service.js",
 		"/home/bititude/Documents/projects/foodx-web/server/api/categories/index.js",
-		"/home/bititude/Documents/projects/foodx-web/server/api/customers/customer.model.js",
 		"/home/bititude/Documents/projects/foodx-web/client/app/Chefs/itemview.html",
-		"/home/bititude/Documents/projects/foodx-web/client/app/employees/employees.html",
 		"/home/bititude/Documents/projects/foodx-web/client/app/Chefs/items.controller.js",
 		"/home/bititude/Documents/projects/foodx-web/client/components/auth/item_review.service.js",
 		"/home/bititude/Documents/projects/foodx-web/client/app/categories/subcategory.html",
-		"/home/bititude/Documents/projects/foodx-web/client/app/Chefs/chefs.html",
 		"/home/bititude/Documents/projects/foodx-web/server/api/item_review/index.js",
 		"/home/bititude/Documents/projects/foodx-web/client/app/featured/featured.controller.js",
 		"/home/bititude/Documents/projects/foodx-web/server/api/item_review/review.controller.js",
@@ -696,21 +708,16 @@
 		"/home/bititude/Documents/projects/foodx-web/client/app/categories/category.service.js",
 		"/home/bititude/Documents/projects/foodx-web/server/api/files/index.js",
 		"/home/bititude/Documents/projects/foodx-web/client/app/categories/category.module.js",
-		"/home/bititude/Documents/projects/foodx-web/client/app/main/main.html",
 		"/home/bititude/Documents/projects/foodx-web/client/app/category.controller.js",
 		"/home/bititude/Documents/projects/foodx-web/client/app/account/account.js",
-		"/home/bititude/Documents/projects/foodx-web/server/api/user/user.model.js",
 		"/home/bititude/Documents/projects/foodx-web/client/components/auth/auth.service.js",
 		"/home/bititude/Documents/projects/foodx-web/uploads/5715fdc222fbcb921e7e71a3.profile.JPG",
 		"/home/bititude/Documents/projects/foodx-web/client/components/fileupload/fileupload.controller.js",
 		"/home/bititude/Documents/projects/foodx-web/client/components/fileupload/fileupload.html",
 		"/home/bititude/Documents/projects/foodx-web/server/auth/local/passport.js",
 		"/home/bititude/Documents/projects/foodx-web/client/components/fileupload/fileupload.module.js",
-		"/home/bititude/Documents/projects/foodx-web/client/app/app.js",
 		"/home/bititude/Documents/projects/foodx-web/client/components/fileupload/fileupload.directive.js",
-		"/home/bititude/Documents/projects/foodx-web/server/config/environment/index.js",
 		"/home/bititude/Documents/projects/foodx-web/client/components/auth/user.service.js",
-		"/home/bititude/Documents/projects/foodx-web/server/config/seed.js",
 		"/home/bititude/Documents/projects/foodx-web/client/app/main/main.js",
 		"/home/bititude/Documents/projects/foodx-web/client/components/auth/router.decorator.js",
 		"/home/bititude/Documents/projects/foodx-web/client/app/account/login/login.html",
@@ -748,13 +755,7 @@
 		"/home/bititude/Documents/projects/foodx-web/client/assets/js/directives/pg-portlet.js",
 		"/home/bititude/Documents/projects/foodx-web/client/assets/js/directives/pg-navigate.js",
 		"/home/bititude/Documents/projects/foodx-web/client/assets/js/config.lazyload.js",
-		"/home/bititude/Documents/projects/foodx-web/client/assets/js/apps/email/service.js",
-		"/home/bititude/Documents/projects/foodx-web/client/assets/js/apps/email/email.js",
-		"/home/bititude/Documents/projects/foodx-web/client/assets/js/directives/pg-form-group.js",
-		"/home/bititude/Documents/projects/foodx-web/client/assets/js/directives/skycons.js",
-		"/home/bititude/Documents/projects/foodx-web/client/assets/js/app.js",
-		"/home/bititude/Documents/projects/foodx-web/client/assets/js/directives/cs-select.js",
-		"/home/bititude/Documents/projects/foodx-web/client/assets/js/directives/pg-dropdown.js"
+		"/home/bititude/Documents/projects/foodx-web/client/assets/js/apps/email/service.js"
 	],
 	"find":
 	{
@@ -765,6 +766,8 @@
 		"height": 93.0,
 		"where_history":
 		[
+			"/home/bititude/Documents/projects/foodx-web/client/app",
+			"<open folders>,/home/bititude/Documents/projects/foodx-web/client/app",
 			"<open folders>",
 			"/home/bititude/Documents/myApp/",
 			"/home/bititude/Documents/projects/hashychat/MyApp",
@@ -778,6 +781,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"imagemin",
+			"things/",
+			"socket",
+			"ngtemplates",
+			"2x",
 			"uglify",
 			"ngtemplates",
 			"assets",
@@ -900,12 +908,7 @@
 			"form",
 			"user",
 			"userId",
-			"files",
-			"timeout",
-			"String",
-			"files[prop][0]",
-			"files.file",
-			"= require("
+			"files"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -923,52 +926,54 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/home/bititude/Documents/projects/foodx-web/server/api/categories/category.model.js",
+					"file": "/home/bititude/Documents/projects/foodx-web/dist/client/index.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 316,
+						"buffer_size": 4960,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								36,
-								36
+								4941,
+								4941
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Babel/JavaScript (Babel).tmLanguage"
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1386.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "/home/bititude/Documents/projects/foodx-web/server/api/items/items.controller.js",
+					"file": "/home/bititude/Documents/projects/foodx-web/server/api/user/user.controller.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 8028,
+						"buffer_size": 3560,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1637,
-								1637
+								688,
+								688
 							]
 						],
 						"settings":
@@ -978,10 +983,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3199.0,
+						"translation.y": 540.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -990,15 +995,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 20850,
+						"buffer_size": 20939,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								9527,
-								9527
+								8203,
+								8203
 							]
 						],
 						"settings":
@@ -1007,58 +1012,28 @@
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 6.0,
-						"translation.y": 3996.0,
+						"translation.x": 26.0,
+						"translation.y": 5083.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 3,
-					"file": "/home/bititude/Documents/projects/foodx-web/server/routes.js",
+					"file": "/home/bititude/Documents/projects/foodx-web/client/index.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 878,
+						"buffer_size": 9732,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								330,
-								330
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "/home/bititude/Documents/projects/foodx-web/client/app/main/main.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2803,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2329,
-								2329
+								9710,
+								9710
 							]
 						],
 						"settings":
@@ -1068,57 +1043,73 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 450.0,
+						"translation.y": 2808.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "/home/bititude/Documents/projects/foodx-web/server/api/user/user.model.js",
+					"buffer": 4,
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5188,
+						"buffer_size": 268,
 						"regions":
 						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										187,
+										194
+									]
+								],
+								"scope": ""
+							}
 						},
 						"selection":
 						[
 							[
-								3018,
-								3018
+								87,
+								87
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Babel/JavaScript (Babel).tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"detect_indentation": false,
+							"line_numbers": false,
+							"output_tag": 1,
+							"result_base_dir": "",
+							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 108.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
-					"file": "customer.model.js",
+					"buffer": 5,
+					"file": "/home/bititude/Documents/projects/foodx-web/client/app/main/main.controller.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 527,
+						"buffer_size": 1137,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								341,
-								341
+								834,
+								834
 							]
 						],
 						"settings":
@@ -1128,10 +1119,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 324.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -1238,7 +1229,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 132.0,
+	"side_bar_width": 213.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
