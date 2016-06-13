@@ -8,7 +8,7 @@ angular.module('foodXApp')
   .config(function($stateProvider) {
     $stateProvider
       .state('order', {
-        url: '/order',
+        url: 'orders',
         templateUrl: 'app/orders/order.html',
         controller: 'OrderController',
         controllerAs: 'vm',
@@ -16,7 +16,7 @@ angular.module('foodXApp')
         authenticate: true
       })
       .state('view', {
-        url     : '/order:id',
+        url     : 'orders/view/:id',
         templateUrl: 'app/orders/vieworder.html',
         controller: 'OrderController',
         controllerAs: 'vm', 

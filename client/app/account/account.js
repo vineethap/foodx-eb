@@ -4,7 +4,7 @@ angular.module('foodXApp')
   .config(function($stateProvider) {
     $stateProvider
       .state('login', {
-        url: '/',
+        url: '/login',
         templateUrl: 'app/account/login/login.html',
         controller: 'LoginController',
         controllerAs: 'vm'
@@ -29,7 +29,7 @@ angular.module('foodXApp')
         authenticate: true
       })
       .state('settings', {
-        url: '/settings',
+        url: 'settings',
         parent: 'main',
         templateUrl: 'app/account/settings/settings.html',
         controller: 'SettingsController',

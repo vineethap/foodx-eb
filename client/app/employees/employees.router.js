@@ -4,7 +4,7 @@ angular.module('foodXApp')
   .config(function($stateProvider) {
     $stateProvider
       .state('employee', {
-        url: '/staff',
+        url: 'staffs',
         parent: 'main',
         templateUrl: 'app/employees/employees.html',
         controller: 'EmployeeController',

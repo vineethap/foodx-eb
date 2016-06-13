@@ -8,7 +8,7 @@ angular.module('foodXApp')
   .config(function($stateProvider) {
     $stateProvider
       .state('featured', {
-        url: '/featured',
+        url: 'featured',
         templateUrl: 'app/featured/featured.html',
         controller: 'FeaturedController',
         controllerAs: 'vm',

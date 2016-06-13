@@ -4,7 +4,7 @@ angular.module('foodXApp.admin')
   .config(function($stateProvider) {
     $stateProvider
       .state('profile', {
-        url: '/:user/:id',
+        url: 'users/:user/:id',
         parent: 'main',
         templateUrl: 'app/profile/profile.html',
         controller: 'ProfileController',
@@ -12,7 +12,7 @@ angular.module('foodXApp.admin')
         authenticate: true
       })
       .state('singleitem', {
-        url     : '/chef/:item/:id',
+        url     : 'chefs/:item/:id',
         templateUrl: 'app/Chefs/itemview.html',
         controller: 'ItemViewCtrl',
         controllerAs: 'vm', 

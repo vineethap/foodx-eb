@@ -4,7 +4,7 @@ angular.module('foodXApp')
   .config(function($stateProvider) {
     $stateProvider
       .state('category', {
-        url: '/category',
+        url: 'categories',
         parent: 'main',
         templateUrl: 'app/categories/category.html',
         controller: 'CategoryController',
@@ -12,7 +12,7 @@ angular.module('foodXApp')
         authenticate: true
       })
       .state('subcategory', {
-        url     : '/category/subcategory/:id',
+        url     : 'categories/:id',
         templateUrl: 'app/categories/subcategory.html',
          controller: 'CategoryController',
         controllerAs: 'ct', 

@@ -15,7 +15,7 @@ angular.module('foodXApp', [
   .config(function($urlRouterProvider, $locationProvider) {
     $urlRouterProvider
     
-      .otherwise('/dashboard');
+      .otherwise('/');
 
     $locationProvider.html5Mode(true);
   });
