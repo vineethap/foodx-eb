@@ -43,7 +43,7 @@ angular.module('foodXApp')
  $rootScope.$on('$stateChangeStart', function (event, next) {
   Auth.isLoggedIn(function(loggedIn) {
     if (!loggedIn) {
-      $location.path('/');
+      $location.path('/login');
     }
   });
 });
