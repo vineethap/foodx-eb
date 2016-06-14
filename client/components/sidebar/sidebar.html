@@ -60,8 +60,8 @@
             <a ui-sref="featured"><span class="title">Featured</span></a>
             <span class="icon-thumbnail"> <img src="assets/img/icon000.png" alt="logo"  data-src="assets/img/icon000.png" ui-jq="unveil" data-src-retina="assets/img/icon000.png" width="15" height="15"></span>
           </li>
-           <li class="" ui-sref-active="active">
-            <a ui-sref="order"><span class="title">Orders</span></a>
+           <li ng-show="vm.isAdmin()"class="" ui-sref-active="active">
+            <a ui-sref="order" ><span class="title">Orders</span></a>
             <span class="icon-thumbnail"> <i class="fa fa-book"></i></span>
           </li>
         </ul>
