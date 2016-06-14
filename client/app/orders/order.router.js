@@ -16,7 +16,7 @@ angular.module('foodXApp')
         authenticate: true
       })
       .state('view', {
-        url     : 'orders/view/:id',
+        url     : 'orders/:id',
         templateUrl: 'app/orders/vieworder.html',
         controller: 'OrderController',
         controllerAs: 'vm', 

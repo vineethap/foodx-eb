@@ -3,8 +3,12 @@
   <div class="modal-body" style="height:100px">
     <div class="row panel panel-default m-t-30" >
       <form name="upload" class="form panel-body" data-ng-submit="vm.addFile()">
-        <div class="col-md-4  m-l-100">
-          <input type="file" name="file" onchange="angular.element(this).scope().vm.uploadedFile(this)" id="file-upload" />
+        <div class="col-md-4  m-l-100 form-group" ng-class="{ 'has-success':  form.files.$valid && vm.submitted,
+                                              'has-error':  form.files.$invalid && vm.submitted }">
+          <input type="file" name="file" onchange="angular.element(this).scope().vm.uploadedFile(this)" id="file-upload" required/>
+          <p class="help-block" ng-show=" form.file.$error.required && vm.submitted">
+            A file is required
+          </p>
         </div>
         <div class="col-md-2 ">
           <button type="submit" class=" button-submit btn-primary m-l-20" id="submit"> upload</button>

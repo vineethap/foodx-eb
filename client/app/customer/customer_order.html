@@ -32,6 +32,15 @@
 									</tr>
 								</thead>
 								<tbody>
+								<tr ng-if="vm.order.length=='0'">
+									<td > </td>
+									<td></td>
+									<td></td>
+									<td>no orders yet</td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
 									<tr ng-repeat="item in vm.order track by $index">
 										<td>{{$index+1}}</td>
 										<td>{{item.delivery_slot}}</td>
@@ -39,6 +48,7 @@
 										<td>{{item.total_price}}</td>
 										<td>{{item.status}}</td>
 										<td>{{item.time | date}}</td>
+										<td><a ui-sref="order_details({id:vm.id})"><i class="fa fa-eye fa-1x pointer" aria-hidden="true" ></i></a></td>
 									</tr>
 								</tbody>
 							</table>

@@ -1,0 +1,57 @@
+<div class="page-content-wrapper">
+  <div class="content" ng-init="vm.initUserorders()">
+    <div class="container-fluid container-fixed-lg">
+
+       <ul class="breadcrumb">
+        <li>
+          <a  class="active" ui-sref="main">Home</a>
+        </li>
+        <li>
+          <a  class="active" ui-sref="customer">customers</a>
+        </li>
+        <li>
+          <a href="#" class="active">orders</a>
+        </li>
+      </ul>
+      <div class="container-fluid container-fixed-lg bg-white">
+		    <div class="panel panel-default">
+		      <div class="panel-heading" style="background-color:#f2f2f2;min-height:70px">		        
+		        <div class="col-md-2 no-padding">
+		          <span>ORDER PLACED</span>
+	   					<br/>
+		          <span>{{vm.orders.time |date}}</span>
+		        </div>
+		        <div class="col-md-2 no-padding">
+		          <span>TOTAL</span>
+		          <br/>
+		          <span>{{vm.orders.total_price | currency:"₹":0}}</span>
+		        </div>
+		        <div class="col-md-2 no-padding">
+			        <span>SHIP TO</span><br/>
+			        <span uib-popover="{{vm.orders.delivery_slot}}" data-placement="bottom" popover-trigger="mouseenter">{{vm.orders.username |uppercase}}</span>
+		        </div>
+		      </div>
+		      <div class="panel-body">
+		        <div class="col-md-3 no-padding">
+		         <h4>{{vm.orders.status |uppercase}}</h4>
+		         <p>Items are not yet delivered</p>
+		        </div>
+		        <div class="col-md-4 col-md-offset-1 no-padding m-t-20" >
+	            <div ng-repeat="item in vm.items">
+			          <p class="text-muted text-size1"> item : {{item.name}}  </p>	          
+			          <p class="text-muted text-size1">qty : {{item.qty}}</p>
+			          <p class="text-muted text-size1">price: {{item.price}}</p>
+			          <br/>
+		          </div>
+		        </div>
+		        <div class="col-md-4">
+		          <button class="btn btn-default pull-right m-t-20" >write review</button>
+		          <br/>
+		          <br/>
+		        </div>
+		      </div>
+		    </div>
+  		</div>
+    </div>
+  </div>
+</div>

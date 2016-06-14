@@ -47,9 +47,7 @@
             <option value="" disabled>select</option>
             <option ng-repeat="subcategory in vm.subcategories" value="{{subcategory}}">{{subcategory}}</option>        
           </select>
-           <!-- <p class="help-block" ng-show=" form.subcategory.$error.required && vm.submitted">
-            What's your category?
-          </p> -->
+          
         </div>
      </div>
       <div class="form-group" ng-class="{ 'has-success':  form.description.$valid && vm.submitted,

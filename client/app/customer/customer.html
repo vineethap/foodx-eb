@@ -34,6 +34,7 @@
                     </tr>
                   </thead>
                   <tbody>
+                  <tr ng-if="vm.users.length=='0'"><td>no users</td></tr>
                     <tr role="row" ng-repeat="user in vm.users track by $index" ng-class="user.active?'': 'disabled'">
                       <td>{{$index + 1}}</td>
                       <td>{{user.phone}}</td>

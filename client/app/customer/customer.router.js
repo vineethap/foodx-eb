@@ -24,4 +24,13 @@ angular.module('foodXApp')
         authenticate: true
     
       })
+      .state('order_details', {
+        url     : 'customers/:id/order',
+        templateUrl: 'app/customer/order_details.html',
+        controller: 'CustomerController',
+        controllerAs: 'vm', 
+        parent: 'main',
+        authenticate: true
+    
+      })
     })
