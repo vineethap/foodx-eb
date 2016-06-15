@@ -20,7 +20,7 @@ class OrderController {
   }
   initItems(){
     this.Orders.getOrder({id:this.$stateParams.id}).$promise.then(res=>{
-     this.order=res;
+     this.orders=res;
      this.items=res.items;
     });
   }

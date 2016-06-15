@@ -15,7 +15,7 @@ class ProfileController {
     this.Category=Category;
     this.Item=Item;
    
-
+console.log($stateParams)
   }
   init=()=>{
     

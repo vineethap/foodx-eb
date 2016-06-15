@@ -32,7 +32,7 @@
                   		<td>{{order.username}}</td>
                   		<td>{{order.time |date}}</td>
                   		<td>{{order.status}}</td>
-                      <td><a class="btn btn-sm " ui-sref="view({id:order._id})" ng-show="!show"><i  class="fa fa-eye fa-1x pointer" aria-hidden="true" ></i></a></td>
+                      <td><a class="btn btn-sm " ui-sref="order_details({id:order.userid})" ng-show="!show"><i  class="fa fa-eye fa-1x pointer" aria-hidden="true" ></i></a></td>
                   	</tr>
                   </tbody>
               </table>
