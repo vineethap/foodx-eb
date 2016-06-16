@@ -15,8 +15,26 @@
       </ul>
       <div class="container-fluid container-fixed-lg bg-white">
 		    <div class="panel panel-default">
-		      <div class="panel-heading" style="background-color:#f2f2f2;min-height:70px">		        
-		        <div class="col-md-2 no-padding">
+		      <div class="panel-heading" style="background-color:#f2f2f2;min-height:70px">		      
+		     
+            <div id="basicTable_wrapper" class="dataTables_wrapper form-inline no-footer">
+              <table class=" table-hover dataTable no-footer" datatable="ng" id="basicTable" role="grid" dt-options="dtOptionsRequestManager">
+              		<thead>
+                    <tr role="row"  >
+                      <td class="col-md-3 row-padding">ORDER PLACED</td>  
+                      <td class="col-md-3 row-padding" >TOTAL</td> 
+                      <td class="col-md-3 row-padding">SHIP TO</td> 
+                    </tr>
+                    <tr>
+                    	<td class="row-padding">{{vm.orders.time |date}}</td>
+                    	<td class="row-padding">{{vm.orders.total_price | currency:"₹":0}}</td>
+                    	<td class="row-padding">{{vm.orders.username |uppercase}}</td>
+                    </tr>
+                  </thead>
+                </table>
+              </div>
+                     
+		       <!--  <div class="col-md-2 no-padding">
 		          <span>ORDER PLACED</span>
 	   					<br/>
 		          <span>{{vm.orders.time |date}}</span>
@@ -29,7 +47,7 @@
 		        <div class="col-md-2 no-padding">
 			        <span>SHIP TO</span><br/>
 			        <span uib-popover="{{vm.orders.delivery_slot}}" data-placement="bottom" popover-trigger="mouseenter">{{vm.orders.username |uppercase}}</span>
-		        </div>
+		        </div> -->
 		      </div>
 		      <div class="panel-body">
 		        <div class="col-md-3 no-padding">

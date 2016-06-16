@@ -37,7 +37,7 @@ export function create(req, res, next) {
 export function getAddress(req, res) {
   return Address.find({userid:req.params.id}).exec()
     .then(Address=> {
-      res.json(Address);
+      res.json({category: "Manage Address Book",list:Address});
       })
     .catch(validationError(res));
 };
