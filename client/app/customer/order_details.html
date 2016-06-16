@@ -34,7 +34,7 @@
 		      <div class="panel-body">
 		        <div class="col-md-3 no-padding">
 		         <h4>{{vm.orders.status |uppercase}}</h4>
-		         <p>Items are not yet delivered</p>
+		         <p ng-if="vm.orders.status=='pending'">Items are not yet delivered</p>
 		        </div>
 		        <div class="col-md-4 col-md-offset-1 no-padding m-t-20" >
 	            <div ng-repeat="item in vm.items">

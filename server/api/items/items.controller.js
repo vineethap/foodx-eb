@@ -77,8 +77,7 @@ export function create(req, res, next) {
       active:true
       });
         return items.save()
-          .then((item) => {
-            console.log(item)
+          .then((item) => {            
             res.json(item)
           })
           .catch(validationError(res));
@@ -124,7 +123,6 @@ export function getOne(req, res) {
 
 export function updateDetails(req, res, next) {
   var itemId = req.body._id;
-  console.log(req.body)
   if(req.body.featured){
     return Item.findById(itemId).exec()
       .then(item => {// don't ever give out the password or salt
@@ -199,7 +197,6 @@ export function getFeatured(req, res) {
 }
 export function updateFeatured(req, res, next) {
   var itemId = req.body._id;
-  console.log(req.body)
     return Item.findById(itemId).exec()
       .then(item => {
         if (!item) {

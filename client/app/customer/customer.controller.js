@@ -19,7 +19,6 @@ class CustomerController {
   initUserorders(){
   	this.Orders.getUserOrders({id:this.$stateParams.id}).$promise.then(res=>{
       this.order=res;
-      console.log(this.order,this.$stateParams.id,this.$stateParams)
       this.orders=res[0];
       if(res.length!=0){
         this.items=res[0].items;

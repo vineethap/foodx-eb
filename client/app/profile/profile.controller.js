@@ -14,8 +14,6 @@ class ProfileController {
     this.Upload=Upload;
     this.Category=Category;
     this.Item=Item;
-   
-console.log($stateParams)
   }
   init=()=>{
     
